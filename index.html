@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.cloudflare.com/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top p-4">
+      <div class="container-fluid">
+        <a
+          id="navbar-title"
+          class="navbar-brand"
+          href="#"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات البيضاء"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                id="nav-home"
+                class="nav-link"
+                href="#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-about"
+                class="nav-link"
+                href="#about"
+                data-en="About"
+                data-fr="À Propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-services"
+                class="nav-link"
+                href="#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="الخدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-gallery"
+                class="nav-link"
+                href="Allsections/gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-blog"
+                class="nav-link"
+                href="Allsections/blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-faq"
+                class="nav-link"
+                href="Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="FAQ"
+                data-ar="أسئلة شائعة"
+                >Faq</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-donate"
+                class="nav-link"
+                href="Allsections/donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un Don/Soutenir"
+                data-es="Donar/Apoyar"
+                data-ar="تتبرع/دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-testimonials"
+                class="nav-link"
+                href="Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="الشهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-contact"
+                class="nav-link"
+                href="#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3 language-select"
+            style="width: 100px"
+            onchange="changeLanguage(this.value)"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar-end -->
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container hero-content" data-aos="fade-up">
+        <h1
+          class="display-4 fw-bold"
+          data-en="Welcome to the World of Albino Animals"
+          data-fr="Bienvenue dans le monde des animaux albinos"
+          data-es="Bienvenido al mundo de los animales albinos"
+          data-ar="مرحبًا بكم في عالم الحيوانات الألبينو"
+        >
+          Welcome to the World of Albino Animals
+        </h1>
+        <p
+          class="lead mt-3"
+          data-en="Explore the rare and unique beauty of nature's albino wonders."
+          data-fr="Explorez la beauté rare et unique des merveilles albinos de la nature."
+          data-es="Explora la rara y única belleza de las maravillas albinas de la naturaleza."
+          data-ar="استكشف الجمال النادر والفريد من نوعه لعجائب الطبيعة الألبينية."
+        >
+          Explore the rare and unique beauty of nature's albino wonders.
+        </p>
+        <a
+          href="#about"
+          class="btn btn-lg btn-outline- mt-4"
+          data-en="Discover More"
+          data-fr="Découvrir plus"
+          data-es="Descubrir más"
+          data-ar="اكتشف المزيد"
+          >Discover More</a
+        >
+      </div>
+      <div class="hero-bg floating"></div>
+    </section>
+    <!-- Home Section End-->
+
+    <!-- Albino Animals Overview Section -->
+    <div
+      class="container-fluid py-5"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="row overview align-items-center">
+        <div class="col-md-6" data-aos="flip-right">
+          <h2
+            id="special-title"
+            class="overview-header fw-bold"
+            data-en="What Makes Albino Animals Special?"
+            data-fr="Qu'est-ce qui rend les animaux albinos spéciaux ?"
+            data-es="¿Qué hace que los animales albinos sean especiales?"
+            data-ar="ما الذي يجعل الحيوانات الألبينية مميزة؟"
+          >
+            What Makes Albino Animals Special?
+          </h2>
+          <p
+            id="special-description"
+            class="overview-text mt-3"
+            data-en="Albino animals are a rare phenomenon, showcasing a genetic trait that results in a complete absence of pigmentation. These extraordinary creatures captivate us with their striking white appearance and sensitive, red or light blue eyes. From mammals to reptiles, albinism can occur across many species, making each albino animal truly one of a kind."
+            data-fr="Les animaux albinos sont un phénomène rare, présentant un trait génétique qui entraîne une absence complète de pigmentation. Ces créatures extraordinaires nous fascinent par leur apparence blanche frappante et leurs yeux sensibles, rouges ou bleu clair. Des mammifères aux reptiles, l'albinisme peut survenir chez de nombreuses espèces, rendant chaque animal albinos véritablement unique."
+            data-es="Los animales albinos son un fenómeno raro que muestra un rasgo genético que resulta en una ausencia completa de pigmentación. Estas extraordinarias criaturas nos cautivan con su apariencia blanca y sus ojos sensibles, rojos o azul claro. Desde mamíferos hasta reptiles, el albinismo puede ocurrir en muchas especies, lo que hace que cada animal albino sea verdaderamente único."
+            data-ar="الحيوانات الألبينية هي ظاهرة نادرة، تعرض سمة وراثية تؤدي إلى غياب كامل للصبغة. تأسرنا هذه المخلوقات الاستثنائية بمظهرها الأبيض الجذاب وعيونها الحساسة، الحمراء أو الزرقاء الفاتحة. من الثدييات إلى الزواحف، يمكن أن يحدث الألبينية عبر العديد من الأنواع، مما يجعل كل حيوان ألبينو فريدًا من نوعه."
+            style="color: #4a4a4a"
+          >
+            Albino animals are a rare phenomenon, showcasing a genetic trait
+            that results in a complete absence of pigmentation. These
+            extraordinary creatures captivate us with their striking white
+            appearance and sensitive, red or light blue eyes. From mammals to
+            reptiles, albinism can occur across many species, making each albino
+            animal truly one of a kind.
+          </p>
+        </div>
+        <div
+          class="col-md-6 text-center"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <img
+            src="img/1.jpg"
+            alt="Albino Tiger"
+            class="img-fluid rounded shadow-lg"
+            style="max-width: 100%; height: 600px; object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Albino Animals Overview Section End -->
+
+    <!-- About Section -->
+    <div
+      class="container-fluid py-5"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <!-- Parallax Background -->
+      <div class="parallax-bg" style="background-image: url('img/6.jpg')"></div>
+
+      <div class="container text-center py-5" id="about">
+        <a href="../index.html#about" style="text-decoration: none">
+          <h2
+            class="fw-bold"
+            style="color: #4a4a4a"
+            data-aos="fade-down"
+            id="about-title"
+            data-en="About Us"
+            data-fr="À propos de nous"
+            data-es="Sobre nosotros"
+            data-ar="معلومات عنا"
+          >
+            About Us
+          </h2>
+        </a>
+        <p
+          class="lead"
+          style="color: #4a4a4a; margin-bottom: 5rem"
+          data-aos="fade-up"
+          id="about-description"
+          data-en="Discover the world of albino animals – rare, beautiful, and fascinating."
+          data-fr="Découvrez le monde des animaux albinos – rares, beaux et fascinants."
+          data-es="Descubre el mundo de los animales albinos: raros, hermosos y fascinantes."
+          data-ar="اكتشف عالم الحيوانات الألبينية - نادرة وجميلة ورائعة."
+        >
+          Discover the world of albino animals – rare, beautiful, and
+          fascinating.
+        </p>
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 text-md-start" data-aos="fade-right">
+            <h3
+              class="text-secondary"
+              style="color: #4a4a4a"
+              id="mission-title"
+              data-en="Our Mission"
+              data-fr="Notre mission"
+              data-es="Nuestra misión"
+              data-ar="مهمتنا"
+            >
+              Our Mission
+            </h3>
+            <p
+              class="mt-3"
+              style="color: #4a4a4a"
+              id="mission-description"
+              data-en="We are dedicated to raising awareness about albino animals. These rare creatures, often misunderstood, deserve our attention and protection. Through our website, we aim to educate the public about the unique challenges albino animals face, such as sensitivity to sunlight and rarity in the wild."
+              data-fr="Nous nous consacrons à sensibiliser le public sur les animaux albinos. Ces créatures rares, souvent mal comprises, méritent notre attention et notre protection. À travers notre site web, nous visons à éduquer le public sur les défis uniques auxquels les animaux albinos sont confrontés, tels que la sensibilité à la lumière du soleil et leur rareté dans la nature."
+              data-es="Estamos dedicados a crear conciencia sobre los animales albinos. Estas criaturas raras, a menudo malinterpretadas, merecen nuestra atención y protección. A través de nuestro sitio web, buscamos educar al público sobre los desafíos únicos que enfrentan los animales albinos, como la sensibilidad a la luz solar y su rareza en la naturaleza."
+              data-ar="نحن مكرسون لزيادة الوعي حول الحيوانات الألبينية. هذه المخلوقات النادرة، التي غالبًا ما تُفهم بشكل خاطئ، تستحق اهتمامنا وحمايتنا. من خلال موقعنا، نهدف إلى تعليم الجمهور حول التحديات الفريدة التي تواجهها الحيوانات الألبينية، مثل الحساسية لأشعة الشمس ونقصها في البرية."
+            >
+              We are dedicated to raising awareness about albino animals. These
+              rare creatures, often misunderstood, deserve our attention and
+              protection. Through our website, we aim to educate the public
+              about the unique challenges albino animals face, such as
+              sensitivity to sunlight and rarity in the wild.
+            </p>
+            <h4
+              class="text-secondary"
+              style="color: #4a4a4a"
+              id="importance-title"
+              data-en="Why Albino Animals Matter"
+              data-fr="Pourquoi les animaux albinos sont importants"
+              data-es="Por qué importan los animales albinos"
+              data-ar="لماذا تعتبر الحيوانات الألبينية مهمة"
+            >
+              Why Albino Animals Matter
+            </h4>
+            <p
+              style="color: #4a4a4a"
+              id="importance-description"
+              data-en="Albino animals are symbols of biodiversity, and protecting them is crucial for preserving the balance of nature. With only a few appearing in the wild, these animals hold an important place in our ecosystems, helping scientists understand genetic diversity and adaptation."
+              data-fr="Les animaux albinos sont des symboles de biodiversité, et les protéger est crucial pour préserver l'équilibre de la nature. Avec seulement quelques-uns apparaissant dans la nature, ces animaux occupent une place importante dans nos écosystèmes, aidant les scientifiques à comprendre la diversité génétique et l'adaptation."
+              data-es="Los animales albinos son símbolos de biodiversidad, y protegerlos es crucial para preservar el equilibrio de la naturaleza. Con solo unos pocos apareciendo en la naturaleza, estos animales ocupan un lugar importante en nuestros ecosistemas, ayudando a los científicos a entender la diversidad genética y la adaptación."
+              data-ar="الحيوانات الألبينية هي رموز للتنوع البيولوجي، وحمايتها أمر بالغ الأهمية للحفاظ على توازن الطبيعة. مع ظهور القليل منها فقط في البرية، تحتل هذه الحيوانات مكانة مهمة في نظمنا البيئية، مما يساعد العلماء على فهم التنوع الجيني والتكيف."
+            >
+              Albino animals are symbols of biodiversity, and protecting them is
+              crucial for preserving the balance of nature. With only a few
+              appearing in the wild, these animals hold an important place in
+              our ecosystems, helping scientists understand genetic diversity
+              and adaptation.
+            </p>
+            <div class="row mt-4">
+              <div class="col">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                  <h3><span class="count" data-target="1000">0</span>+</h3>
+                  <p
+                    class="text-muted"
+                    style="color: #4a4a4a"
+                    data-en="Albino Animals Globally"
+                    data-fr="Animaux albinos dans le monde"
+                    data-es="Animales albinos en todo el mundo"
+                    data-ar="الحيوانات الألبينية في جميع أنحاء العالم"
+                  >
+                    Albino Animals Globally
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                  <h3><span class="count" data-target="50">0</span>+</h3>
+                  <p
+                    class="text-muted"
+                    style="color: #4a4a4a"
+                    data-en="Species Affected"
+                    data-fr="Espèces touchées"
+                    data-es="Especies afectadas"
+                    data-ar="الأنواع المتأثرة"
+                  >
+                    Species Affected
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                  <h3><span class="count" data-target="5">0</span>%</h3>
+                  <p
+                    class="text-muted"
+                    style="color: #4a4a4a"
+                    data-en="Survival Rate"
+                    data-fr="Taux de survie"
+                    data-es="Tasa de supervivencia"
+                    data-ar="معدل البقاء"
+                  >
+                    Survival Rate
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                  <h3><span class="count" data-target="10">0</span></h3>
+                  <p
+                    class="text-muted"
+                    style="color: #4a4a4a"
+                    data-en="Continents with Sightings"
+                    data-fr="Continents avec des observations"
+                    data-es="Continentes con avistamientos"
+                    data-ar="القارات التي تحتوي على مشاهدات"
+                  >
+                    Continents with Sightings
+                  </p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
+                  <h3><span class="count" data-target="20">0</span>+</h3>
+                  <p
+                    class="text-muted"
+                    style="color: #4a4a4a"
+                    data-en="Conservation Projects"
+                    data-fr="Projets de conservation"
+                    data-es="Proyectos de conservación"
+                    data-ar="مشاريع الحفظ"
+                  >
+                    Conservation Projects
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-down" data-aos-delay="500">
+            <img
+              src="img/2.jpg"
+              alt="Albino Animal"
+              class="img-fluid rounded shadow-lg"
+              style="max-width: 100%; height: 500px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section End -->
+
+    <!-- Services -->
+    <section
+      class="service_section layout_padding"
+      id="services"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="container text-center py-5">
+        <div
+          class="heading_container heading_center"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
+          <a href="../index.html#services" style="text-decoration: none">
+            <h2
+              id="services-title"
+              data-en="Our Services"
+              data-fr="Nos Services"
+              data-es="Nuestros Servicios"
+              data-ar="خدماتنا"
+              style="color: #4a4a4a"
+            >
+              Our Services
+            </h2>
+          </a>
+          <p
+            class="lead text-muted mt-3"
+            id="services-description"
+            data-en="Dedicated to the care and protection of albino animals.<br>Providing rescue, medical care, and rehabilitation services.<br>Raising awareness for their unique challenges and conservation."
+            data-fr="Dédié à la protection et aux soins des animaux albinos.<br>Fournir des services de sauvetage, de soins médicaux et de réhabilitation.<br>Sensibiliser aux défis uniques et à la conservation."
+            data-es="Dedicado al cuidado y protección de los animales albinos.<br>Proporcionando servicios de rescate, atención médica y rehabilitación.<br>Concienciando sobre sus desafíos únicos y la conservación."
+            data-ar="مكرس للعناية وحماية الحيوانات الأليفة.<br>تقديم خدمات الإنقاذ والرعاية الطبية وإعادة التأهيل.<br>زيادة الوعي بالتحديات الفريدة والحفاظ عليها."
+          >
+            Dedicated to the care and protection of albino animals.<br />
+            Providing rescue, medical care, and rehabilitation services.<br />
+            Raising awareness for their unique challenges and conservation.
+          </p>
+        </div>
+
+        <!-- SERVICE SECTION -->
+        <div class="row">
+          <div
+            class="col-md-6 col-lg-3 mx-auto"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <div class="box">
+              <div class="img-box">
+                <img src="img/6.jpg" alt="Albino Animal Rescue" />
+              </div>
+              <div class="detail-box">
+                <h5
+                  id="service1-title"
+                  data-en="Albino Animal Rescue"
+                  data-fr="Sauvetage d'Animaux Albinos"
+                  data-es="Rescate de Animales Albinos"
+                  data-ar="إنقاذ الحيوانات الأليفة"
+                >
+                  Albino Animal Rescue
+                </h5>
+                <p
+                  id="service1-description"
+                  data-en="We provide specialized rescue services for rare albino animals in distress, ensuring their safety and well-being."
+                  data-fr="Nous fournissons des services de sauvetage spécialisés pour les animaux albinos rares en détresse, garantissant leur sécurité et leur bien-être."
+                  data-es="Proporcionamos servicios de rescate especializados para animales albinos raros en peligro, asegurando su seguridad y bienestar."
+                  data-ar="نقدم خدمات إنقاذ متخصصة للحيوانات الأليفة النادرة في محنة، مما يضمن سلامتها ورفاهيتها."
+                  style="color: #4a4a4a"
+                >
+                  We provide specialized rescue services for rare albino animals
+                  in distress, ensuring their safety and well-being.
+                </p>
+                <a
+                  id="service1-readmore"
+                  href="animal-rescue.html"
+                  class="read-more-btn"
+                  data-lang-en="Read More"
+                  data-lang-es="Leer Más"
+                  data-lang-fr="Lire La Suite"
+                  data-lang-ar="اقرأ المزيد"
+                  style="text-decoration: none; color: #4a4a4a"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 mx-auto"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <div class="box">
+              <div class="img-box">
+                <img src="img/18.jpg" alt="Medical Care for Albino Animals" />
+              </div>
+              <div class="detail-box">
+                <h5
+                  id="service2-title"
+                  data-en="Medical Care"
+                  data-fr="Soins Médicaux"
+                  data-es="Atención Médica"
+                  data-ar="الرعاية الطبية"
+                >
+                  Medical Care
+                </h5>
+                <p
+                  id="service2-description"
+                  data-en="Our team provides specialized medical care for albino animals, focusing on their unique health needs and solutions."
+                  data-fr="Notre équipe fournit des soins médicaux spécialisés pour les animaux albinos, en se concentrant sur leurs besoins et solutions de santé uniques."
+                  data-es="Nuestro equipo proporciona atención médica especializada para animales albinos, centrándose en sus necesidades de salud y soluciones únicas."
+                  data-ar="فريقنا يقدم الرعاية الطبية المتخصصة للحيوانات الأليفة، مع التركيز على احتياجاتهم الصحية الفريدة والحلول."
+                >
+                  Our team provides specialized medical care for albino animals,
+                  focusing on their unique health needs and solutions.
+                </p>
+                <a
+                  id="service2-readmore"
+                  href="medical-care.html"
+                  class="read-more-btn"
+                  data-lang-en="Read More"
+                  data-lang-es="Leer Más"
+                  data-lang-fr="Lire La Suite"
+                  data-lang-ar="اقرأ المزيد"
+                  style="text-decoration: none; color: #4a4a4a"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 mx-auto"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <div class="box">
+              <div class="img-box">
+                <img src="img/22.jpg" alt="Rehabilitation for Albino Animals" />
+              </div>
+              <div class="detail-box">
+                <h5
+                  id="service3-title"
+                  data-en="Rehabilitation Programs"
+                  data-fr="Programmes de Réhabilitation"
+                  data-es="Programas de Rehabilitación"
+                  data-ar="برامج إعادة التأهيل"
+                >
+                  Rehabilitation Programs
+                </h5>
+                <p
+                  id="service3-description"
+                  data-en="Albino animals recover and adapt to safe environments, ensuring long-term survival."
+                  data-fr="Les animaux albinos se rétablissent et s'adaptent à des environnements sûrs, assurant leur survie à long terme."
+                  data-es="Los animales albinos se recuperan y se adaptan a entornos seguros, asegurando su supervivencia a largo plazo."
+                  data-ar="تتعافى الحيوانات الأليفة وتتكيف مع بيئات آمنة، مما يضمن البقاء على المدى الطويل."
+                >
+                  Albino animals recover and adapt to safe environments,
+                  ensuring long-term survival.
+                </p>
+                <a
+                  id="service3-readmore"
+                  href="rehab.html"
+                  class="read-more-btn"
+                  data-lang-en="Read More"
+                  data-lang-es="Leer Más"
+                  data-lang-fr="Lire La Suite"
+                  data-lang-ar="اقرأ المزيد"
+                  style="text-decoration: none; color: #4a4a4a"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 mx-auto"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            <div class="box">
+              <div class="img-box">
+                <img src="img/0.jpg" alt="Albino Animal Awareness" />
+              </div>
+              <div class="detail-box">
+                <h5
+                  id="service4-title"
+                  data-en="Awareness and Advocacy"
+                  data-fr="Sensibilisation et Plaidoyer"
+                  data-es="Conciencia y Abogacía"
+                  data-ar="التوعية والدعوة"
+                >
+                  Awareness and Advocacy
+                </h5>
+                <p
+                  id="service4-description"
+                  data-en="Advocate for albino animals, educating communities on their protection and conservation."
+                  data-fr="Plaidoyer pour les animaux albinos, éduquant les communautés sur leur protection et leur conservation."
+                  data-es="Abogar por los animales albinos, educando a las comunidades sobre su protección y conservación."
+                  data-ar="الدعوة للحيوانات الأليفة، وتثقيف المجتمعات حول حمايتها والحفاظ عليها."
+                >
+                  Advocate for albino animals, educating communities on their
+                  protection and conservation.
+                </p>
+                <a
+                  id="service4-readmore"
+                  href="awareness.html"
+                  class="read-more-btn"
+                  data-lang-en="Read More"
+                  data-lang-es="Leer Más"
+                  data-lang-fr="Lire La Suite"
+                  data-lang-ar="اقرأ المزيد"
+                  style="text-decoration: none; color: #4a4a4a"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End here -->
+
+    <!-- Gallery section -->
+
+    <section
+      id="gallery"
+      class="gallery-section py-5"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="container">
+        <h2
+          class="text-center mb-5"
+          data-en="Extraordinary Albino Animal Gallery"
+          data-fr="Galerie des Animaux Albinos Extraordinaires"
+          data-es="Galería Extraordinaria de Animales Albinos"
+          data-ar="معرض الحيوانات الألبينو الاستثنائية"
+        >
+          Extraordinary Albino Animal Gallery
+        </h2>
+        <p
+          class="text-center mb-4 lead"
+          data-en="Explore rare and fascinating images of albino animals, showcasing their beauty and uniqueness."
+          data-fr="Explorez des images rares et fascinantes d'animaux albinos, mettant en valeur leur beauté et leur unicité."
+          data-es="Explora imágenes raras y fascinantes de animales albinos, mostrando su belleza y singularidad."
+          data-ar="استكشف صوراً نادرة ومذهلة للحيوانات الألبينو، تبرز جمالها وتفردها."
+        >
+          Explore rare and fascinating images of albino animals, showcasing
+          their beauty and uniqueness.
+        </p>
+
+        <div class="owl-carousel gallery-carousel">
+          <div class="card" id="gallery-item-1">
+            <img src="img/39.jpg" alt="Albino Tiger" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-1-title"
+                data-en="Albino Grasshopper"
+                data-fr="Sauterelle Albinos"
+                data-es="Saltamontes Albino"
+                data-ar="جراد ألبينو"
+              >
+                Albino Grasshopper
+              </h3>
+              <p
+                id="gallery-item-1-description"
+                data-en="The rare and powerful albino grasshopper."
+                data-fr="La rare et puissante sauterelle albinos."
+                data-es="El raro y poderoso saltamontes albino."
+                data-ar="الجرادة الألبينية النادرة والقوية."
+              >
+                The rare and powerful albino grasshopper.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" id="gallery-item-2">
+            <img src="img/4.jpg" alt="Albino Peacock" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-2-title"
+                data-en="Albino Polar Bear"
+                data-fr="Ours Polaire Albinos"
+                data-es="Oso Polar Albino"
+                data-ar="دب قطبي ألبينو"
+              >
+                Albino Polar Bear
+              </h3>
+              <p
+                id="gallery-item-2-description"
+                data-en="The graceful albino polar bear in full display."
+                data-fr="L'élégant ours polaire albinos en pleine vue."
+                data-es="El elegante oso polar albino en plena exhibición."
+                data-ar="الدب القطبي الألبينو الأنيق في عرض كامل."
+              >
+                The graceful albino polar bear in full display.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" id="gallery-item-3">
+            <img src="img/61.jpg" alt="Albino Alligator" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-3-title"
+                data-en="Albino Bat"
+                data-fr="Chauve-souris Albinos"
+                data-es="Murciélago Albino"
+                data-ar="خفاش ألبينو"
+              >
+                Albino Bat
+              </h3>
+              <p
+                id="gallery-item-3-description"
+                data-en="A rare glimpse of an albino bat."
+                data-fr="Un rare aperçu d'une chauve-souris albinos."
+                data-es="Una rara mirada a un murciélago albino."
+                data-ar="لمحة نادرة عن خفاش ألبينو."
+              >
+                A rare glimpse of an albino bat.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" id="gallery-item-4">
+            <img src="img/63.jpg" alt="Albino Deer" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-4-title"
+                data-en="Albino Chimpanzee"
+                data-fr="Chimpanzé Albinos"
+                data-es="Chimpancé Albino"
+                data-ar="شامبانزي ألبينو"
+              >
+                Albino Chimpanzee
+              </h3>
+              <p
+                id="gallery-item-4-description"
+                data-en="The elegance of an albino Chimpanzee in the wild."
+                data-fr="L'élégance d'un chimpanzé albinos dans la nature."
+                data-es="La elegancia de un chimpancé albino en la naturaleza."
+                data-ar="أنيقة الشامبانزي الألبينو في البرية."
+              >
+                The elegance of an albino Chimpanzee in the wild.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="gallery-item-5">
+            <img src="img/6.jpg" alt="Albino Lion Family" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-5-title"
+                data-en="Albino Lion Family"
+                data-fr="Famille de Lions Albinos"
+                data-es="Familia de Leones Albinos"
+                data-ar="عائلة الأسود الألبينو"
+              >
+                Albino Lion Family
+              </h3>
+              <p
+                id="gallery-item-5-description"
+                data-en="The elegance of an albino Lion family in the wild."
+                data-fr="L'élégance d'une famille de lions albinos dans la nature."
+                data-es="La elegancia de una familia de leones albinos en la naturaleza."
+                data-ar="أنيقة عائلة الأسود الألبينو في البرية."
+              >
+                The elegance of an albino Lion family in the wild.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="gallery-item-6">
+            <img src="img/53.jpg" alt="Albino Crocodile" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-6-title"
+                data-en="Albino Crocodile"
+                data-fr="Crocodile Albinos"
+                data-es="Cocodrilo Albino"
+                data-ar="تمساح ألبينو"
+              >
+                Albino Crocodile
+              </h3>
+              <p
+                id="gallery-item-6-description"
+                data-en="The elegance of an albino Crocodile in the wild."
+                data-fr="L'élégance d'un crocodile albinos dans la nature."
+                data-es="La elegancia de un cocodrilo albino en la naturaleza."
+                data-ar="أنيقة التمساح الألبينو في البرية."
+              >
+                The elegance of an albino Crocodile in the wild.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="gallery-item-7">
+            <img src="img/55.jpg" alt="Albino Tortoise" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-7-title"
+                data-en="Albino Tortoise"
+                data-fr="Tortue Albinos"
+                data-es="Tortuga Albina"
+                data-ar="سلحفاة ألبينو"
+              >
+                Albino Tortoise
+              </h3>
+              <p
+                id="gallery-item-7-description"
+                data-en="The elegance of an albino Tortoise in the wild."
+                data-fr="L'élégance d'une tortue albinos dans la nature."
+                data-es="La elegancia de una tortuga albina en la naturaleza."
+                data-ar="أنيقة السلحفاة الألبينو في البرية."
+              >
+                The elegance of an albino Tortoise in the wild.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="gallery-item-8">
+            <img src="img/17.jpg" alt="Albino Octopus" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-8-title"
+                data-en="Albino Octopus"
+                data-fr="Poulpe Albinos"
+                data-es="Pulpo Albino"
+                data-ar="أخطبوط ألبينو"
+              >
+                Albino Octopus
+              </h3>
+              <p
+                id="gallery-item-8-description"
+                data-en="The elegance of an albino Octopus in the wild."
+                data-fr="L'élégance d'un poulpe albinos dans la nature."
+                data-es="La elegancia de un pulpo albino en la naturaleza."
+                data-ar="أنيقة الأخطبوط الألبينو في البرية."
+              >
+                The elegance of an albino Octopus in the wild.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="gallery-item-9">
+            <img src="img/59.jpg" alt="Albino Dolphin" />
+            <div class="card-body">
+              <h3
+                id="gallery-item-9-title"
+                data-en="Albino Dolphin"
+                data-fr="Dauphin Albinos"
+                data-es="Delfín Albino"
+                data-ar="دلفين ألبينو"
+              >
+                Albino Dolphin
+              </h3>
+              <p
+                id="gallery-item-9-description"
+                data-en="The elegance of an albino Dolphin in the wild."
+                data-fr="L'élégance d'un dauphin albinos dans la nature."
+                data-es="La elegancia de un delfín albino en la naturaleza."
+                data-ar="أنيقة الدلفين الألبينو في البرية."
+              >
+                The elegance of an albino Dolphin in the wild.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END -->
+
+    <section
+      id="contact"
+      class=""
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="container">
+        <h2
+          class="text-center mb-2"
+          data-en="Contact"
+          data-fr="Contact"
+          data-es="Contacto"
+          data-ar="تواصل"
+          style="color: #4a4a4a"
+        >
+          Contact
+        </h2>
+        <p
+          class="text-center mb-4 lead"
+          data-en="We’d love to hear from you! Whether you’re curious about albino animals or just want to say hello, feel free to reach out and let’s connect."
+          data-fr="Nous serions ravis d’avoir de vos nouvelles ! Que vous soyez curieux des animaux albinos ou que vous souhaitiez simplement dire bonjour, n’hésitez pas à nous contacter."
+          data-es="¡Nos encantaría saber de ti! Ya sea que tengas curiosidad por los animales albinos o solo quieras saludar, no dudes en ponerte en contacto con nosotros."
+          data-ar="يسعدنا التواصل معك! سواء كنت مهتمًا بالحيوانات الألبينو أو تريد فقط إلقاء التحية، لا تتردد في الاتصال بنا."
+          style="color: #4a4a4a"
+        >
+          We’d love to hear from you! Whether you’re curious about albino
+          animals<br />
+          or just want to say hello, feel free to reach out and let’s connect.
+        </p>
+      </div>
+
+      <div class="contact-container d-flex justify-content-between py-5">
+        <div class="contact-section">
+          <h3
+            class="text-center mb-4"
+            data-en="Get In Touch"
+            data-fr="Entrer en contact"
+            data-es="Ponte en contacto"
+            data-ar="تواصل معنا"
+            style="color: #4a4a4a"
+          >
+            Get In Touch
+          </h3>
+          <div class="contact-card-3d">
+            <div class="card-inner">
+              <!-- Front of the card -->
+              <div class="card-front">
+                <p
+                  data-en="We are here to assist you with any inquiries."
+                  data-fr="Nous sommes là pour vous aider avec vos demandes."
+                  data-es="Estamos aquí para ayudarte con cualquier consulta."
+                  data-ar="نحن هنا لمساعدتك في أي استفسارات."
+                  style="color: #4a4a4a"
+                >
+                  We are here to assist you with any inquiries.
+                </p>
+                <button
+                  class="contact-orb"
+                  data-en="Send Message"
+                  data-fr="Envoyer le message"
+                  data-es="Enviar mensaje"
+                  data-ar="أرسل الرسالة"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              <!-- Back of the card -->
+              <div class="card-back">
+                <form class="contact-form-advanced">
+                  <div class="input-group">
+                    <input type="text" placeholder=" " id="name" required />
+                    <label
+                      for="name"
+                      data-en="Name"
+                      data-fr="Nom"
+                      data-es="Nombre"
+                      data-ar="الاسم"
+                      >Name</label
+                    >
+                  </div>
+                  <div class="input-group">
+                    <input type="email" placeholder=" " id="email" required />
+                    <label
+                      for="email"
+                      data-en="Email"
+                      data-fr="Email"
+                      data-es="Correo electrónico"
+                      data-ar="البريد الإلكتروني"
+                      >Email</label
+                    >
+                  </div>
+                  <div class="input-group">
+                    <textarea
+                      placeholder=" "
+                      id="message"
+                      rows="4"
+                      required
+                    ></textarea>
+                    <label
+                      for="message"
+                      data-en="Your Message"
+                      data-fr="Votre message"
+                      data-es="Tu mensaje"
+                      data-ar="رسالتك"
+                      >Your Message</label
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-submit-advanced"
+                    data-en="Send"
+                    data-fr="Envoyer"
+                    data-es="Enviar"
+                    data-ar="إرسال"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end -->
+
+        <!-- Apointment -->
+        <div class="appointment-section">
+          <h3
+            class="text-center mb-4"
+            data-en="Book An Appointment"
+            data-fr="Prendre un rendez-vous"
+            data-es="Reservar una cita"
+            data-ar="احجز موعدًا"
+            style="color: #4a4a4a"
+          >
+            Book An Appointment
+          </h3>
+          <div class="contact-card-3d">
+            <div class="card-inner">
+              <!-- Front of the card -->
+              <div class="card-front">
+                <p
+                  data-en="Schedule a time for us to connect."
+                  data-fr="Planifiez un moment pour nous connecter."
+                  data-es="Programa un tiempo para que nos conectemos."
+                  data-ar="حدد وقتًا للتواصل."
+                  style="color: #4a4a4a"
+                >
+                  Schedule a time for us to connect.
+                </p>
+                <button
+                  class="contact-orb"
+                  data-en="Book Appointment"
+                  data-fr="Prendre rendez-vous"
+                  data-es="Reservar cita"
+                  data-ar="احجز موعدًا"
+                >
+                  Book Appointment
+                </button>
+              </div>
+
+              <!-- Back of the card -->
+              <div class="card-back">
+                <form class="appointment-form-advanced">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      placeholder=" "
+                      id="appt-name"
+                      required
+                    />
+                    <label
+                      for="appt-name"
+                      data-en="Your Name"
+                      data-fr="Votre nom"
+                      data-es="Tu nombre"
+                      data-ar="اسمك"
+                      >Your Name</label
+                    >
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      placeholder=" "
+                      id="appt-email"
+                      required
+                    />
+                    <label
+                      for="appt-email"
+                      data-en="Your Email"
+                      data-fr="Votre email"
+                      data-es="Tu correo electrónico"
+                      data-ar="بريدك الإلكتروني"
+                      >Your Email</label
+                    >
+                  </div>
+                  <div class="input-group">
+                    <input type="date" id="appt-date" required />
+                    <label
+                      for="appt-date"
+                      data-en="Appointment Date"
+                      data-fr="Date du rendez-vous"
+                      data-es="Fecha de la cita"
+                      data-ar="تاريخ الموعد"
+                      >Appointment Date</label
+                    >
+                  </div>
+                  <div class="input-group">
+                    <input type="time" id="appt-time" required />
+                    <label
+                      for="appt-time"
+                      data-en="Appointment Time"
+                      data-fr="Heure du rendez-vous"
+                      data-es="Hora de la cita"
+                      data-ar="وقت الموعد"
+                      >Appointment Time</label
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-submit-advanced"
+                    data-en="Book Appointment"
+                    data-fr="Prendre rendez-vous"
+                    data-es="Reservar cita"
+                    data-ar="احجز موعدًا"
+                  >
+                    Book Appointment
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end -->
+
+    <!-- footer -->
+
+    <footer
+      class="footer-section"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h1
+              class="logo-text"
+              data-en="Albino Animals"
+              data-fr="Animaux Albinos"
+              data-es="Animales Albinos"
+              data-ar="الحيوانات الألبينو"
+            >
+              Albino Animals
+            </h1>
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a
+                  href="./Allsections/gallery.html"
+                  data-en="Gallery"
+                  data-fr="Galerie"
+                  data-es="Galería"
+                  data-ar="معرض"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./Allsections/blog.html"
+                  data-en="Blog"
+                  data-fr="Blog"
+                  data-es="Blog"
+                  data-ar="مدونة"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./Allsections/faq.html"
+                  data-en="FAQ"
+                  data-fr="FAQ"
+                  data-es="FAQ"
+                  data-ar="أسئلة متكررة"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./Allsections/donate.html"
+                  data-en="Contact"
+                  data-fr="Contact"
+                  data-es="Contacto"
+                  data-ar="اتصل"
+                  >Donate/Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <a
+              href="#"
+              aria-label="Facebook"
+              data-en="Facebook"
+              data-fr="Facebook"
+              data-es="Facebook"
+              data-ar="فيسبوك"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              data-en="Twitter"
+              data-fr="Twitter"
+              data-es="Twitter"
+              data-ar="تويتر"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              data-en="Instagram"
+              data-fr="Instagram"
+              data-es="Instagram"
+              data-ar="انستغرام"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              aria-label="YouTube"
+              data-en="YouTube"
+              data-fr="YouTube"
+              data-es="YouTube"
+              data-ar="يوتيوب"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+          <div class="footer-credits">
+            <p
+              data-en="&copy; <span id='current-year'></span> Albino Animals. All rights reserved."
+              data-fr="&copy; <span id='current-year'></span> Animaux Albinos. Tous droits réservés."
+              data-es="&copy; <span id='current-year'></span> Animales Albinos. Todos los derechos reservados."
+              data-ar="&copy; <span id='current-year'></span> الحيوانات الألبينو. جميع الحقوق محفوظة."
+            >
+              &copy; <span id="current-year"></span> Albino Animals. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+
+    <script src="albino.js"></script>
+  </body>
+</html>

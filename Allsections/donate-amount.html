@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+      }
+      .donate-section {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        border-radius: 12px;
+        padding: 60px 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .donate-title {
+        font-size: 2.5rem;
+        color: #4a4a4a;
+      }
+
+      .donate-description {
+        font-size: 1.2rem;
+        color: #4a4a4a;
+        margin-bottom: 40px;
+      }
+
+      .donate-option {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .donate-option h3 {
+        font-size: 1.8rem;
+        color: #4a4a4a;
+        margin-bottom: 10px;
+      }
+
+      .donate-option p {
+        font-size: 1rem;
+        color: #4a4a4a;
+        margin-bottom: 20px;
+      }
+
+      .donate-option:hover {
+        transform: translateY(-10px);
+      }
+
+      .donate-btn {
+        background-color: #ff7f50;
+        color: #4a4a4a;
+        border: none;
+        padding: 10px 30px;
+        font-size: 1rem;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+      }
+
+      .donate-btn:hover {
+        background-color: #4a4a4a;
+        color: #ff7f50;
+      }
+
+      @media (max-width: 768px) {
+        .donate-option {
+          margin-bottom: 18px;
+        }
+      }
+
+      .custom-donate {
+        font-size: 1.2rem;
+        color: #4a4a4a;
+      }
+
+      .custom-donate-input {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid#FF7F50;
+        border-radius: 50px;
+        padding: 10px;
+        font-size: 1.1rem;
+      }
+
+      .custom-donate-btn {
+        background-color: #ff7f50;
+        color: #4a4a4a;
+        border: none;
+        padding: 12px 40px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+      }
+
+      .custom-donate-btn:hover {
+        background-color: #4a4a4a;
+        color: #ff7f50;
+      }
+
+      .progress-container {
+        font-size: 1.3rem;
+        color: #4a4a4a;
+      }
+
+      .progress {
+        height: 30px;
+        background-color: #4a4a4a;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        font-size: 1rem;
+        color: #4a4a4a;
+        padding-left: 10px;
+      }
+
+      .payment-icons img {
+        width: 50px;
+        margin: 0 10px;
+        border-radius: 10%;
+      }
+
+      .payment-btn {
+        background-color: #ff7f50;
+        color: #4a4a4a;
+        padding: 12px 40px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .payment-btn:hover {
+        background-color: #4a4a4a;
+        color: #ff7f50;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" data-lang="navBrand"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#home" data-lang="navHome"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-lang="navAbout"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-lang="navServices"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html" data-lang="navGallery"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html" data-lang="navBlog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/faq.html"
+                data-lang="navFAQ"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html" data-lang="navDonate"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="testimonials.html"
+                data-lang="navTestimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-lang="navContact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section id="donate-section" class="donate-section container py-5">
+      <div class="donate-header text-center">
+        <h2 class="donate-title mt-5" data-lang="donateTitle">
+          Support Our Mission
+        </h2>
+        <p class="donate-description text-center" data-lang="donateDesc">
+          Your generous donation helps us protect and care for rare albino
+          animals around the world. Choose an amount or enter your custom
+          donation.
+        </p>
+      </div>
+
+      <!-- Donation Options -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-3">
+          <div class="donate-option">
+            <h3 data-lang="donate10">$10</h3>
+            <p data-lang="donate10Desc">Help provide food for a week</p>
+            <button class="btn donate-btn" data-lang="donate10Btn">
+              Donate $10
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="donate-option">
+            <h3 data-lang="donate25">$25</h3>
+            <p data-lang="donate25Desc">Support vet care for a month</p>
+            <button class="btn donate-btn" data-lang="donate25Btn">
+              Donate $25
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="donate-option">
+            <h3 data-lang="donate50">$50</h3>
+            <p data-lang="donate50Desc">Contribute to long-term conservation</p>
+            <button class="btn donate-btn" data-lang="donate50Btn">
+              Donate $50
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Donation -->
+      <div class="custom-donate text-center mt-5">
+        <p data-lang="customDonateText">Or enter a custom amount:</p>
+        <input
+          type="number"
+          placeholder="Enter custom amount"
+          class="form-control custom-donate-input"
+        />
+        <button class="btn custom-donate-btn mt-3" data-lang="customDonateBtn">
+          Donate Custom Amount
+        </button>
+      </div>
+
+      <!-- Progress Bar for Funding Goal -->
+      <div class="progress-container text-center mt-5">
+        <h4 data-lang="fundingGoal">Funding Goal: $10,000</h4>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 65%"
+            aria-valuenow="6500"
+            aria-valuemin="0"
+            aria-valuemax="10000"
+            data-lang="fundingProgress"
+          >
+            $6,500 Raised
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Options -->
+      <div class="payment-options text-center mt-5">
+        <h5 data-lang="paymentMethodTitle">Choose Your Payment Method</h5>
+        <div class="payment-icons">
+          <img src="../img/pay5.jpg" alt="Visa" />
+          <img src="../img/pay4.jpg" alt="MasterCard" />
+          <img src="../img/pay2.jpg" alt="PayPal" />
+          <img src="../img/pay1.jpg" alt="Stripe" />
+        </div>
+        <button class="btn payment-btn mt-4" data-lang="paymentBtn">
+          Proceed to Payment
+        </button>
+      </div>
+    </section>
+    <script>
+      const translations = {
+        en: {
+          navBrand: "Albino Animals",
+          navHome: "Home",
+          navAbout: "About",
+          navServices: "Services",
+          navGallery: "Gallery",
+          navBlog: "Blog",
+          navFAQ: "FAQ",
+          navDonate: "Donate/Support",
+          navTestimonials: "Testimonials",
+          navContact: "Contact",
+          donateTitle: "Support Our Mission",
+          donateDesc:
+            "Your generous donation helps us protect and care for rare albino animals around the world. Choose an amount or enter your custom donation.",
+          donate10: "$10",
+          donate10Desc: "Help provide food for a week",
+          donate10Btn: "Donate $10",
+          donate25: "$25",
+          donate25Desc: "Support vet care for a month",
+          donate25Btn: "Donate $25",
+          donate50: "$50",
+          donate50Desc: "Contribute to long-term conservation",
+          donate50Btn: "Donate $50",
+          customDonateText: "Or enter a custom amount:",
+          customDonateBtn: "Donate Custom Amount",
+          fundingGoal: "Funding Goal: $10,000",
+          fundingProgress: "$6,500 Raised",
+          paymentMethodTitle: "Choose Your Payment Method",
+          paymentBtn: "Proceed to Payment",
+        },
+        fr: {
+          navBrand: "Animaux Albinos",
+          navHome: "Accueil",
+          navAbout: "À propos",
+          navServices: "Services",
+          navGallery: "Galerie",
+          navBlog: "Blog",
+          navFAQ: "FAQ",
+          navDonate: "Faire un don/Soutenir",
+          navTestimonials: "Témoignages",
+          navContact: "Contact",
+          donateTitle: "Soutenez notre mission",
+          donateDesc:
+            "Votre généreux don nous aide à protéger et à prendre soin des animaux albinos rares dans le monde entier. Choisissez un montant ou entrez un don personnalisé.",
+          donate10: "10 €",
+          donate10Desc: "Aidez à fournir de la nourriture pour une semaine",
+          donate10Btn: "Faire un don de 10 €",
+          donate25: "25 €",
+          donate25Desc: "Soutenez les soins vétérinaires pour un mois",
+          donate25Btn: "Faire un don de 25 €",
+          donate50: "50 €",
+          donate50Desc: "Contribuer à la conservation à long terme",
+          donate50Btn: "Faire un don de 50 €",
+          customDonateText: "Ou entrez un montant personnalisé :",
+          customDonateBtn: "Faire un don personnalisé",
+          fundingGoal: "Objectif de financement : 10 000 €",
+          fundingProgress: "6 500 € Collectés",
+          paymentMethodTitle: "Choisissez votre mode de paiement",
+          paymentBtn: "Procéder au paiement",
+        },
+        es: {
+          navBrand: "Animales Albinos",
+          navHome: "Inicio",
+          navAbout: "Acerca de",
+          navServices: "Servicios",
+          navGallery: "Galería",
+          navBlog: "Blog",
+          navFAQ: "FAQ",
+          navDonate: "Donar/Apoyar",
+          navTestimonials: "Testimonios",
+          navContact: "Contacto",
+          donateTitle: "Apoya nuestra misión",
+          donateDesc:
+            "Tu generosa donación nos ayuda a proteger y cuidar a los raros animales albinos en todo el mundo. Elige una cantidad o ingresa tu donación personalizada.",
+          donate10: "$10",
+          donate10Desc: "Ayuda a proporcionar alimentos por una semana",
+          donate10Btn: "Donar $10",
+          donate25: "$25",
+          donate25Desc: "Apoya el cuidado veterinario por un mes",
+          donate25Btn: "Donar $25",
+          donate50: "$50",
+          donate50Desc: "Contribuye a la conservación a largo plazo",
+          donate50Btn: "Donar $50",
+          customDonateText: "O ingresa una cantidad personalizada:",
+          customDonateBtn: "Donar cantidad personalizada",
+          fundingGoal: "Meta de financiación: $10,000",
+          fundingProgress: "$6,500 Recaudados",
+          paymentMethodTitle: "Elige tu método de pago",
+          paymentBtn: "Proceder al pago",
+        },
+        ar: {
+          navBrand: "الحيوانات البيضاء",
+          navHome: "الرئيسية",
+          navAbout: "معلومات عنا",
+          navServices: "الخدمات",
+          navGallery: "المعرض",
+          navBlog: "المدونة",
+          navFAQ: "الأسئلة الشائعة",
+          navDonate: "التبرع/الدعم",
+          navTestimonials: "الشهادات",
+          navContact: "اتصل بنا",
+          donateTitle: "دعم مهمتنا",
+          donateDesc:
+            "تبرعكم السخي يساعدنا في حماية ورعاية الحيوانات البيضاء النادرة حول العالم. اختر مبلغاً أو ادخل تبرعاً مخصصاً.",
+          donate10: "10 دولارات",
+          donate10Desc: "ساعد في توفير الطعام لمدة أسبوع",
+          donate10Btn: "تبرع بـ 10 دولارات",
+          donate25: "25 دولاراً",
+          donate25Desc: "دعم الرعاية البيطرية لمدة شهر",
+          donate25Btn: "تبرع بـ 25 دولاراً",
+          donate50: "50 دولاراً",
+          donate50Desc: "المساهمة في الحفظ طويل الأجل",
+          donate50Btn: "تبرع بـ 50 دولاراً",
+          customDonateText: "أو أدخل مبلغاً مخصصاً:",
+          customDonateBtn: "تبرع بمبلغ مخصص",
+          fundingGoal: "الهدف التمويلي: 10,000 دولار",
+          fundingProgress: "تم جمع 6,500 دولار",
+          paymentMethodTitle: "اختر طريقة الدفع",
+          paymentBtn: "المتابعة إلى الدفع",
+        },
+      };
+
+      function changeLanguage() {
+        const selectedLang = document.getElementById("languageSelect").value;
+        const elements = document.querySelectorAll("[data-lang]");
+
+        elements.forEach((el) => {
+          const key = el.getAttribute("data-lang");
+          if (translations[selectedLang][key]) {
+            el.textContent = translations[selectedLang][key];
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

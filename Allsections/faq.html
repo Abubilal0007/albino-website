@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Albino Animals Blog</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body{
+        background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);
+      }
+     
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات الألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="خدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="FAQ"
+                data-ar="أسئلة شائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don/Soutien"
+                data-es="Donar/Apoyar"
+                data-ar="تبرع/دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section id="faq" class="faq-section" style="margin-top: 90px; background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);">
+      <div class="container">
+        <h2   
+          class="text-center"
+          data-en="Frequently Asked Questions"
+          data-fr="Questions Fréquemment Posées"
+          data-es="Preguntas Frecuentes"
+          data-ar="الأسئلة المتكررة"
+        >
+          Frequently Asked Questions
+        </h2>
+
+        <!-- Search Input -->
+        <div class="faq-search mb-3">
+          <input
+            type="text"
+            id="faqSearch"
+            class="form-control"
+            placeholder="Search for a question..."
+            onkeyup="filterFAQ()"
+          />
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <span
+                  data-en="What is albinism in animals?"
+                  data-fr="Qu'est-ce que l'albinisme chez les animaux ?"
+                  data-es="¿Qué es el albinismo en los animales?"
+                  data-ar="ما هو الألبينية في الحيوانات؟"
+                  >What is albinism in animals?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Albinism is a genetic condition that results in a lack of melanin, the pigment that colors the skin, hair, and eyes. Animals with albinism have white or light-colored fur and pink eyes."
+                data-fr="L'albinisme est une condition génétique qui résulte d'un manque de mélanine, le pigment qui colore la peau, les cheveux et les yeux. Les animaux albinos ont un pelage blanc ou de couleur claire et des yeux roses."
+                data-es="El albinismo es una condición genética que resulta en la falta de melanina, el pigmento que colorea la piel, el cabello y los ojos. Los animales albinos tienen pelaje blanco o de color claro y ojos rosas."
+                data-ar="الألبينية هي حالة وراثية تؤدي إلى نقص الميلانين، الصبغة التي تعطي لونًا للجلد والشعر والعينين. الحيوانات الأليفة لديها فراء أبيض أو فاتح وعيون وردية."
+              >
+                Albinism is a genetic condition that results in a lack of
+                melanin, the pigment that colors the skin, hair, and eyes.
+                Animals with albinism have white or light-colored fur and pink
+                eyes.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                <span
+                  data-en="Are albino animals rare?"
+                  data-fr="Les animaux albinos sont-ils rares ?"
+                  data-es="¿Son raros los animales albinos?"
+                  data-ar="هل الحيوانات الأليفة نادرة؟"
+                  >Are albino animals rare?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Yes, albino animals are very rare. The condition occurs when both parents carry the recessive gene for albinism, which happens in only a small percentage of cases."
+                data-fr="Oui, les animaux albinos sont très rares. La condition se produit lorsque les deux parents portent le gène récessif de l'albinisme, ce qui n'arrive que dans un petit pourcentage des cas."
+                data-es="Sí, los animales albinos son muy raros. La condición ocurre cuando ambos padres llevan el gen recesivo del albinismo, lo cual sucede solo en un pequeño porcentaje de casos."
+                data-ar="نعم، الحيوانات الأليفة نادرة جداً. تحدث هذه الحالة عندما يحمل كلا الوالدين الجين المتنحي للألبينية، وهو ما يحدث فقط في نسبة صغيرة من الحالات."
+              >
+                Yes, albino animals are very rare. The condition occurs when
+                both parents carry the recessive gene for albinism, which
+                happens in only a small percentage of cases.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                <span
+                  data-en="Can albino animals survive in the wild?"
+                  data-fr="Les animaux albinos peuvent-ils survivre dans la nature ?"
+                  data-es="¿Pueden sobrevivir los animales albinos en la naturaleza?"
+                  data-ar="هل يمكن للحيوانات الأليفة البقاء في البرية؟"
+                  >Can albino animals survive in the wild?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Survival can be difficult for albino animals in the wild. Their lack of camouflage makes them more vulnerable to predators, and they may also have vision problems due to the lack of pigment in their eyes."
+                data-fr="La survie peut être difficile pour les animaux albinos dans la nature. Leur manque de camouflage les rend plus vulnérables aux prédateurs, et ils peuvent également avoir des problèmes de vision en raison du manque de pigment dans leurs yeux."
+                data-es="La supervivencia puede ser difícil para los animales albinos en la naturaleza. Su falta de camuflaje los hace más vulnerables a los depredadores, y también pueden tener problemas de visión debido a la falta de pigmento en sus ojos."
+                data-ar="قد يكون البقاء صعبًا بالنسبة للحيوانات الأليفة في البرية. إن نقص التمويه يجعلها أكثر عرضة للافتراس، وقد تعاني أيضًا من مشاكل في الرؤية بسبب نقص الصبغة في عيونها."
+              >
+                Survival can be difficult for albino animals in the wild. Their
+                lack of camouflage makes them more vulnerable to predators, and
+                they may also have vision problems due to the lack of pigment in
+                their eyes.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                <span
+                  data-en="How do albino animals differ from leucistic animals?"
+                  data-fr="Comment les animaux albinos diffèrent-ils des animaux leucistiques ?"
+                  data-es="¿En qué se diferencian los animales albinos de los leucísticos?"
+                  data-ar="كيف تختلف الحيوانات الأليفة عن الحيوانات التي تعاني من الليوكينية؟"
+                  >How do albino animals differ from leucistic animals?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Albino animals completely lack melanin, resulting in pink eyes and pale skin or fur. Leucistic animals have reduced pigmentation, but they may still have some color and normal eye pigmentation."
+                data-fr="Les animaux albinos manquent complètement de mélanine, ce qui donne des yeux roses et une peau ou un pelage pâles. Les animaux leucistiques ont une pigmentation réduite, mais ils peuvent encore avoir de la couleur et une pigmentation oculaire normale."
+                data-es="Los animales albinos carecen completamente de melanina, lo que resulta en ojos rosas y piel o pelaje pálido. Los animales leucísticos tienen una pigmentación reducida, pero aún pueden tener algo de color y pigmentación ocular normal."
+                data-ar="تفتقر الحيوانات الأليفة تمامًا إلى الميلانين، مما يؤدي إلى عيون وردية وبشرة أو فرو شاحب. تمتلك الحيوانات البيضية تلوينًا منخفضًا، لكنها قد لا تزال تتمتع ببعض اللون واللون الطبيعي للعيون."
+              >
+                Albino animals completely lack melanin, resulting in pink eyes
+                and pale skin or fur. Leucistic animals have reduced
+                pigmentation, but they may still have some color and normal eye
+                pigmentation.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                <span
+                  data-en="What are some common myths about albino animals?"
+                  data-fr="Quels sont les mythes courants sur les animaux albinos ?"
+                  data-es="¿Cuáles son algunos mitos comunes sobre los animales albinos?"
+                  data-ar="ما هي بعض الأساطير الشائعة حول الحيوانات الأليفة؟"
+                  >What are some common myths about albino animals?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Common myths include that albino animals are always sick or have shorter lifespans. In reality, they can live healthy lives with proper care."
+                data-fr="Les mythes courants incluent que les animaux albinos sont toujours malades ou ont une espérance de vie plus courte. En réalité, ils peuvent mener une vie saine avec des soins appropriés."
+                data-es="Los mitos comunes incluyen que los animales albinos siempre están enfermos o tienen una esperanza de vida más corta. En realidad, pueden llevar vidas saludables con el cuidado adecuado."
+                data-ar="تشمل الأساطير الشائعة أن الحيوانات الأليفة دائمًا ما تكون مريضة أو تعيش لفترة أقصر. في الواقع، يمكنهم أن يعيشوا حياة صحية مع الرعاية المناسبة."
+              >
+                Common myths include that albino animals are always sick or have
+                shorter lifespans. In reality, they can live healthy lives with
+                proper care.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="false"
+                aria-controls="collapseSeven"
+              >
+                <span
+                  data-en="Are there any famous albino animals?"
+                  data-fr="Y a-t-il des animaux albinos célèbres ?"
+                  data-es="¿Hay animales albinos famosos?"
+                  data-ar="هل هناك أي حيوانات أليفة مشهورة؟"
+                  >Are there any famous albino animals?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseSeven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSeven"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Yes, there are famous albino animals, such as Snowflake the gorilla and Casper the friendly ghost cat."
+                data-fr="Oui, il existe des animaux albinos célèbres, comme Snowflake le gorille et Casper le chat fantôme amical."
+                data-es="Sí, hay animales albinos famosos, como Snowflake el gorila y Casper el gato fantasma amigable."
+                data-ar="نعم، هناك حيوانات أليفة مشهورة، مثل Snowflake الغوريلا وCasper القط الشبح الودود."
+              >
+                Yes, there are famous albino animals, such as Snowflake the
+                gorilla and Casper the friendly ghost cat.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 8 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEight"
+                aria-expanded="false"
+                aria-controls="collapseEight"
+              >
+                <span
+                  data-en="How do I care for an albino pet?"
+                  data-fr="Comment prendre soin d'un animal de compagnie albinos ?"
+                  data-es="¿Cómo cuido a una mascota albina?"
+                  data-ar="كيف أعتني بحيوان أليف ألبين؟"
+                  >How do I care for an albino pet?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseEight"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEight"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Caring for an albino pet involves protecting them from the sun, providing a balanced diet, and regular veterinary check-ups."
+                data-fr="Prendre soin d'un animal de compagnie albinos implique de le protéger du soleil, de lui fournir une alimentation équilibrée et de faire des visites régulières chez le vétérinaire."
+                data-es="Cuidar de una mascota albina implica protegerla del sol, proporcionarle una dieta equilibrada y chequeos veterinarios regulares."
+                data-ar="يتضمن العناية بحيوان أليف ألبين حمايته من الشمس، وتوفير نظام غذائي متوازن، وزيارات منتظمة للطبيب البيطري."
+              >
+                Caring for an albino pet involves protecting them from the sun,
+                providing a balanced diet, and regular veterinary check-ups.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 9 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseNine"
+                aria-expanded="false"
+                aria-controls="collapseNine"
+              >
+                <span
+                  data-en="What habitats do albino animals live in?"
+                  data-fr="Quels habitats occupent les animaux albinos ?"
+                  data-es="¿En qué hábitats viven los animales albinos?"
+                  data-ar="ما هي المواطن التي تعيش فيها الحيوانات الأليفة؟"
+                  >What habitats do albino animals live in?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseNine"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingNine"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Albino animals can be found in various habitats, including forests, grasslands, and deserts, depending on their species."
+                data-fr="Les animaux albinos peuvent être trouvés dans divers habitats, y compris les forêts, les prairies et les déserts, selon leur espèce."
+                data-es="Los animales albinos se pueden encontrar en varios hábitats, incluidas bosques, praderas y desiertos, según su especie."
+                data-ar="يمكن العثور على الحيوانات الأليفة في مواطن مختلفة، بما في ذلك الغابات، والمراعي، والصحارى، اعتمادًا على نوعها."
+              >
+                Albino animals can be found in various habitats, including
+                forests, grasslands, and deserts, depending on their species.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 10 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTen"
+                aria-expanded="false"
+                aria-controls="collapseTen"
+              >
+                <span
+                  data-en="Do albino animals have different behaviors?"
+                  data-fr="Les animaux albinos ont-ils des comportements différents ?"
+                  data-es="¿Tienen los animales albinos comportamientos diferentes?"
+                  data-ar="هل تمتلك الحيوانات الأليفة سلوكيات مختلفة؟"
+                  >Do albino animals have different behaviors?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseTen"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTen"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Albino animals may exhibit different behaviors due to their visual impairments, which can affect their hunting and social interactions."
+                data-fr="Les animaux albinos peuvent présenter des comportements différents en raison de leurs déficiences visuelles, ce qui peut affecter leurs interactions de chasse et sociales."
+                data-es="Los animales albinos pueden exhibir comportamientos diferentes debido a sus discapacidades visuales, que pueden afectar su caza e interacciones sociales."
+                data-ar="قد تظهر الحيوانات الأليفة سلوكيات مختلفة بسبب إعاقاتها البصرية، مما قد يؤثر على صيدها وتفاعلاتها الاجتماعية."
+              >
+                Albino animals may exhibit different behaviors due to their
+                visual impairments, which can affect their hunting and social
+                interactions.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 11 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEleven">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEleven"
+                aria-expanded="false"
+                aria-controls="collapseEleven"
+              >
+                <span
+                  data-en="How can I help albino animals in my area?"
+                  data-fr="Comment puis-je aider les animaux albinos dans ma région ?"
+                  data-es="¿Cómo puedo ayudar a los animales albinos en mi área?"
+                  data-ar="كيف يمكنني مساعدة الحيوانات الأليفة في منطقتي؟"
+                  >How can I help albino animals in my area?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseEleven"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingEleven"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="You can help by raising awareness about albino animals, supporting local wildlife rescues, and educating others about their needs."
+                data-fr="Vous pouvez aider en sensibilisant les gens à propos des animaux albinos, en soutenant les sauvetages d'animaux sauvages locaux et en éduquant les autres sur leurs besoins."
+                data-es="Puedes ayudar creando conciencia sobre los animales albinos, apoyando rescates de vida silvestre locales y educando a otros sobre sus necesidades."
+                data-ar="يمكنك المساعدة من خلال زيادة الوعي حول الحيوانات الأليفة، ودعم إنقاذ الحياة البرية المحلية، وتثقيف الآخرين حول احتياجاتهم."
+              >
+                You can help by raising awareness about albino animals,
+                supporting local wildlife rescues, and educating others about
+                their needs.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 12 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwelve">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwelve"
+                aria-expanded="false"
+                aria-controls="collapseTwelve"
+              >
+                <span
+                  data-en="Can albino animals adapt to their environment?"
+                  data-fr="Les animaux albinos peuvent-ils s'adapter à leur environnement ?"
+                  data-es="¿Pueden los animales albinos adaptarse a su entorno?"
+                  data-ar="هل يمكن للحيوانات الأليفة التكيف مع بيئتها؟"
+                  >Can albino animals adapt to their environment?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseTwelve"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwelve"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Albino animals can adapt to their environment, but they may face challenges due to their lack of pigmentation and potential vision issues."
+                data-fr="Les animaux albinos peuvent s'adapter à leur environnement, mais ils peuvent rencontrer des défis en raison de leur manque de pigmentation et de problèmes de vision potentiels."
+                data-es="Los animales albinos pueden adaptarse a su entorno, pero pueden enfrentar desafíos debido a su falta de pigmentación y problemas potenciales de visión."
+                data-ar="يمكن للحيوانات الأليفة التكيف مع بيئتها، لكنها قد تواجه تحديات بسبب نقص الصبغة والمشكلات البصرية المحتملة."
+              >
+                Albino animals can adapt to their environment, but they may face
+                challenges due to their lack of pigmentation and potential
+                vision issues.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                <span
+                  data-en="Do albino animals need special care?"
+                  data-fr="Les animaux albinos ont-ils besoin de soins spéciaux ?"
+                  data-es="¿Los animales albinos necesitan cuidados especiales?"
+                  data-ar="هل تحتاج الحيوانات الأليفة إلى رعاية خاصة؟"
+                  >Do albino animals need special care?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#faqAccordion"
+            >
+              <div
+                class="accordion-body"
+                data-en="Yes, albino animals may need special care, particularly regarding sun exposure. Their lack of pigmentation can make them more susceptible to sunburn and skin cancer, so they should be protected from direct sunlight."
+                data-fr="Oui, les animaux albinos peuvent avoir besoin de soins spéciaux, notamment en ce qui concerne l'exposition au soleil. Leur manque de pigmentation peut les rendre plus sensibles aux coups de soleil et au cancer de la peau, ils doivent donc être protégés des rayons directs du soleil."
+                data-es="Sí, los animales albinos pueden necesitar cuidados especiales, especialmente en lo que respecta a la exposición al sol. Su falta de pigmentación puede hacerlos más susceptibles a quemaduras solares y cáncer de piel, por lo que deben ser protegidos de la luz solar directa."
+                data-ar="نعم، قد تحتاج الحيوانات الأليفة إلى رعاية خاصة، لا سيما فيما يتعلق بالتعرض للشمس. إن نقص الصبغة يجعلها أكثر عرضة لحروق الشمس وسرطان الجلد، لذا ينبغي حمايتها من أشعة الشمس المباشرة."
+              >
+                Yes, albino animals may need special care, particularly
+                regarding sun exposure. Their lack of pigmentation can make them
+                more susceptible to sunburn and skin cancer, so they should be
+                protected from direct sunlight.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Function to change the language of the FAQ section
+      function changeLanguage() {
+        const selectedLanguage =
+          document.getElementById("languageSelect").value;
+
+        // Get all elements with data attributes for language
+        const translatableElements = document.querySelectorAll(
+          "[data-en], [data-fr], [data-es], [data-ar]"
+        );
+
+        translatableElements.forEach((element) => {
+          // Get the data for the selected language
+          const translatedText = element.getAttribute(
+            `data-${selectedLanguage}`
+          );
+          // Update the inner text with the translated text
+          if (translatedText) {
+            element.innerText = translatedText;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

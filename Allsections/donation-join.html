@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+      }
+      .join-section,
+      .volunteer-section {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        border-radius: 12px;
+        padding: 60px 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .join-title,
+      .volunteer-title {
+        font-size: 2.5rem;
+        color: #4a4a4a;
+      }
+
+      .join-description,
+      .volunteer-description {
+        font-size: 1.2rem;
+        color: #4a4a4a;
+        margin-bottom: 40px;
+      }
+
+      .join-option,
+      .volunteer-option {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .join-option:hover,
+      .volunteer-option:hover {
+        transform: translateY(-10px);
+      }
+
+      .join-option h3,
+      .volunteer-option h3 {
+        font-size: 1.8rem;
+        color: #4a4a4a;
+        margin-bottom: 10px;
+      }
+
+      .join-option p,
+      .volunteer-option p {
+        font-size: 1rem;
+        color: #4a4a4a;
+        margin-bottom: 20px;
+      }
+
+      .join-btn,
+      .volunteer-btn {
+        background-color: #ff7f50;
+        color: #4a4a4a;
+        border: none;
+        padding: 10px 30px;
+        font-size: 1rem;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+      }
+
+      .join-btn:hover,
+      .volunteer-btn:hover {
+        background-color: #4a4a4a;
+        color: #ff7f50;
+      }
+
+      @media (max-width: 768px) {
+        .join-option,
+        .volunteer-option {
+          margin-bottom: 18px;
+        }
+      }
+
+      .custom-join-btn,
+      .custom-volunteer-btn {
+        background-color: #ff7f50;
+        color: #4a4a4a;
+        border: none;
+        padding: 12px 40px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+      }
+
+      .custom-join-btn:hover,
+      .custom-volunteer-btn:hover {
+        background-color: #4a4a4a;
+        color: #ff7f50;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات الألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="خدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="FAQ"
+                data-ar="أسئلة شائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don/Soutien"
+                data-es="Donar/Apoyar"
+                data-ar="تبرع/دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section id="volunteer-section" class="volunteer-section container py-5">
+      <div class="volunteer-header text-center">
+        <h2
+          class="volunteer-title"
+          data-en="Become a Volunteer"
+          data-fr="Devenir Bénévole"
+          data-es="Conviértete en Voluntario"
+          data-ar="كن متطوعًا"
+        >
+          Become a Volunteer
+        </h2>
+        <p
+          class="volunteer-description"
+          data-en="Join our team of dedicated volunteers and help support our mission of protecting albino animals in their natural habitats. Every action counts!"
+          data-fr="Rejoignez notre équipe de bénévoles dévoués et aidez à soutenir notre mission de protection des animaux albinos dans leur habitat naturel. Chaque action compte!"
+          data-es="Únete a nuestro equipo de voluntarios dedicados y ayuda a apoyar nuestra misión de proteger a los animales albinos en su hábitat natural. ¡Cada acción cuenta!"
+          data-ar="انضم إلى فريقنا من المتطوعين المDedicated. ساعد في دعم مهمتنا لحماية الحيوانات الألبينو في موائلها الطبيعية. كل عمل مهم!"
+        >
+          Join our team of dedicated volunteers and help support our mission of
+          protecting albino animals in their natural habitats. Every action
+          counts!
+        </p>
+      </div>
+
+      <!-- Volunteer Opportunities -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-4">
+          <div class="volunteer-option">
+            <h3
+              data-en="Field Volunteer"
+              data-fr="Bénévole de Terrain"
+              data-es="Voluntario de Campo"
+              data-ar="متطوع ميداني"
+            >
+              Field Volunteer
+            </h3>
+            <p
+              data-en="Help with animal care and preservation"
+              data-fr="Aider à la protection et aux soins des animaux"
+              data-es="Ayudar con el cuidado y la preservación de los animales"
+              data-ar="المساعدة في رعاية الحيوانات والحفاظ عليها"
+            >
+              Help with animal care and preservation
+            </p>
+            <button
+              class="btn volunteer-btn"
+              data-en="Sign Up for Field Volunteer"
+              data-fr="Inscrivez-vous pour le bénévolat sur le terrain"
+              data-es="Inscríbete para ser voluntario en el campo"
+              data-ar="سجل للتطوع الميداني"
+            >
+              Sign Up for Field Volunteer
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="volunteer-option">
+            <h3
+              data-en="Event Volunteer"
+              data-fr="Bénévole d'Événement"
+              data-es="Voluntario de Eventos"
+              data-ar="متطوع في الحدث"
+            >
+              Event Volunteer
+            </h3>
+            <p
+              data-en="Assist with fundraising events and campaigns"
+              data-fr="Aider lors des événements et campagnes de collecte de fonds"
+              data-es="Asistir en eventos de recaudación de fondos y campañas"
+              data-ar="المساعدة في أحداث جمع التبرعات والحملات"
+            >
+              Assist with fundraising events and campaigns
+            </p>
+            <button
+              class="btn volunteer-btn"
+              data-en="Sign Up for Event Volunteer"
+              data-fr="Inscrivez-vous pour le bénévolat d'événements"
+              data-es="Inscríbete para ser voluntario en eventos"
+              data-ar="سجل للتطوع في الأحداث"
+            >
+              Sign Up for Event Volunteer
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="volunteer-option">
+            <h3
+              data-en="Remote Volunteer"
+              data-fr="Bénévole à Distance"
+              data-es="Voluntario Remoto"
+              data-ar="متطوع عن بُعد"
+            >
+              Remote Volunteer
+            </h3>
+            <p
+              data-en="Help us from home by spreading awareness online"
+              data-fr="Aidez-nous depuis chez vous à sensibiliser en ligne"
+              data-es="Ayúdanos desde casa a crear conciencia en línea"
+              data-ar="ساعدنا من المنزل من خلال نشر الوعي عبر الإنترنت"
+            >
+              Help us from home by spreading awareness online
+            </p>
+            <button
+              class="btn volunteer-btn"
+              data-en="Sign Up for Remote Volunteer"
+              data-fr="Inscrivez-vous pour le bénévolat à distance"
+              data-es="Inscríbete para ser voluntario remoto"
+              data-ar="سجل للتطوع عن بُعد"
+            >
+              Sign Up for Remote Volunteer
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Volunteer Sign-Up -->
+      <div class="custom-volunteer text-center mt-5">
+        <p
+          data-en="Have specific skills to offer? Let us know!"
+          data-fr="Vous avez des compétences spécifiques à offrir ? Faites-le nous savoir !"
+          data-es="¿Tienes habilidades específicas que ofrecer? ¡Háznoslo saber!"
+          data-ar="هل لديك مهارات محددة لتقدمها؟ دعنا نعرف!"
+        >
+          Have specific skills to offer? Let us know!
+        </p>
+        <button
+          class="btn custom-volunteer-btn"
+          data-en="Customize Your Volunteer Role"
+          data-fr="Personnalisez votre rôle de bénévole"
+          data-es="Personaliza tu rol de voluntario"
+          data-ar="خصص دورك كمتطوع"
+        >
+          Customize Your Volunteer Role
+        </button>
+      </div>
+    </section>
+    <script>
+      function changeLanguage() {
+        const selectedLanguage =
+          document.getElementById("languageSelect").value;
+
+        document.querySelector(".navbar-brand").textContent = document
+          .querySelector(".navbar-brand")
+          .getAttribute(`data-${selectedLanguage}`);
+
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.textContent = link.getAttribute(`data-${selectedLanguage}`);
+        });
+
+        document.querySelector(".volunteer-title").textContent = document
+          .querySelector(".volunteer-title")
+          .getAttribute(`data-${selectedLanguage}`);
+
+        document.querySelector(".volunteer-description").textContent = document
+          .querySelector(".volunteer-description")
+          .getAttribute(`data-${selectedLanguage}`);
+
+        document.querySelectorAll(".volunteer-option h3").forEach((option) => {
+          option.textContent = option.getAttribute(`data-${selectedLanguage}`);
+        });
+
+        document.querySelectorAll(".volunteer-option p").forEach((option) => {
+          option.textContent = option.getAttribute(`data-${selectedLanguage}`);
+        });
+
+        document
+          .querySelectorAll(".volunteer-option button")
+          .forEach((button) => {
+            button.textContent = button.getAttribute(
+              `data-${selectedLanguage}`
+            );
+          });
+
+        document.querySelector(".custom-volunteer p").textContent = document
+          .querySelector(".custom-volunteer p")
+          .getAttribute(`data-${selectedLanguage}`);
+        document.querySelector(".custom-volunteer-btn").textContent = document
+          .querySelector(".custom-volunteer-btn")
+          .getAttribute(`data-${selectedLanguage}`);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        changeLanguage();
+      });
+    </script>
+  </body>
+</html>

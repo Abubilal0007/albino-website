@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="animal-rescue.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      #languageSelect {
+        width: 120px;
+        padding: 8px 10px;
+        border: 2px solid #FF7F50;
+        border-radius: 5px;
+        background-color: white;
+        color: white;
+        font-size: 16px;
+        transition: border-color 0.3s;
+        background-color: #FF7F50;
+      }
+
+      #languageSelect:focus {
+        outline: none;
+        border-color: #FF7F50;
+      }
+
+      #languageSelect option {
+        background-color: white;
+        color: #333;
+      }
+
+      #languageSelect:disabled {
+        background-color: rgba(153, 238, 156, 0.8);
+        color: #6c757d;
+        cursor: not-allowed;
+      }
+
+      .medical-care-section {
+        position: relative;
+        padding: 50px 0;
+        background-image: url("img/8.jpg"); 
+        background-size: cover;
+        background-position: center;
+      }
+
+      .card {
+        transition: transform 0.3s ease;
+        background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        background-color: #FF7F50;
+        border: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #4A4A4A;
+        color: #FF7F50;
+      }
+
+      @media (max-width: 768px) {
+        .medical-care-section {
+          padding: 20px 0;
+        }
+        .card {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-fixed-top"
+      style="background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);"
+    >
+      <div class="container">
+        <a
+          id="nav-brand"
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات الألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                id="nav-home"
+                class="nav-link"
+                href="index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-about"
+                class="nav-link"
+                href="index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="معلومات عنا"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-services"
+                class="nav-link"
+                href="index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="الخدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-gallery"
+                class="nav-link"
+                href="Allsections/gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-blog"
+                class="nav-link"
+                href="Allsections/blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-faq"
+                class="nav-link"
+                href="Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="Preguntas frecuentes"
+                data-ar="الأسئلة الشائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-donate"
+                class="nav-link"
+                href="Allsections/donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don / Soutenir"
+                data-es="Donar / Apoyar"
+                data-ar="تتبرع / دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-testimonials"
+                class="nav-link"
+                href="Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-contact"
+                class="nav-link"
+                href="index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="medical-care"
+      class="medical-care-section py-5"
+      style="background-color: #f8f9fa"
+    >
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2
+            class="text-center"
+            data-en="Medical Care for Albino Animals"
+            data-fr="Soins Médicaux pour Animaux Albinos"
+            data-es="Cuidado Médico para Animales Albinos"
+            data-ar="الرعاية الطبية للحيوانات الألبينية" style="color: #FF7F50;"
+          >
+            Medical Care for Albino Animals
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg rounded" style="border: none">
+              <img
+                src="img/28.jpg"
+                class="card-img-top"
+                alt="Veterinary Care"
+                style="width: 50px; border-radius: 50%"
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title"
+                  data-en="Veterinary Consultation"
+                  data-fr="Consultation Vétérinaire"
+                  data-es="Consulta Veterinaria"
+                  data-ar="استشارة بيطرية"
+                >
+                  Veterinary Consultation
+                </h5>
+                <p
+                  class="card-text"
+                  data-en="Expert veterinary care tailored for albino species."
+                  data-fr="Soins vétérinaires experts adaptés aux espèces albinos."
+                  data-es="Atención veterinaria experta adaptada a especies albinas."
+                  data-ar="الرعاية البيطرية المتخصصة المخصصة للأنواع الألبينية."
+                >
+                  Expert veterinary care tailored for albino species.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg rounded" style="border: none">
+              <img
+                src="img/21.jpg"
+                class="card-img-top"
+                alt="Nutritional Support"
+                style="width: 50px; border-radius: 50%"
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title"
+                  data-en="Nutritional Support"
+                  data-fr="Soutien Nutritionnel"
+                  data-es="Apoyo Nutricional"
+                  data-ar="الدعم الغذائي"
+                >
+                  Nutritional Support
+                </h5>
+                <p
+                  class="card-text"
+                  data-en="Customized diets to meet the unique needs of albino animals."
+                  data-fr="Régimes alimentaires personnalisés pour répondre aux besoins uniques des animaux albinos."
+                  data-es="Dietas personalizadas para satisfacer las necesidades únicas de los animales albinos."
+                  data-ar="الأنظمة الغذائية المخصصة لتلبية الاحتياجات الفريدة للحيوانات الألبينية."
+                >
+                  Customized diets to meet the unique needs of albino animals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg rounded" style="border: none">
+              <img
+                src="img/47.jpg"
+                class="card-img-top"
+                alt="Shelter and Rehabilitation"
+                style="width: 50px; border-radius: 50%"
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title"
+                  data-en="Shelter and Rehabilitation"
+                  data-fr="Abri et Réhabilitation"
+                  data-es="Refugio y Rehabilitación"
+                  data-ar="مأوى وإعادة تأهيل"
+                >
+                  Shelter and Rehabilitation
+                </h5>
+                <p
+                  class="card-text"
+                  data-en="Safe and comfortable facilities for recovery."
+                  data-fr="Installations sûres et confortables pour la récupération."
+                  data-es="Instalaciones seguras y cómodas pour la recuperación."
+                  data-ar="مرافق آمنة ومريحة للتعافي."
+                >
+                  Safe and comfortable facilities for recovery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card shadow-lg rounded" style="border: none">
+              <img
+                src="img/33.jpg"
+                class="card-img-top"
+                alt="Education and Awareness"
+                style="width: 50px; border-radius: 50%"
+              />
+              <div class="card-body">
+                <h5
+                  class="card-title"
+                  data-en="Education and Awareness"
+                  data-fr="Éducation et Sensibilisation"
+                  data-es="Educación y Concienciación"
+                  data-ar="التعليم والتوعية"
+                >
+                  Education and Awareness
+                </h5>
+                <p
+                  class="card-text"
+                  data-en="Programs to educate the public about albino animals."
+                  data-fr="Programmes pour sensibiliser le public aux animaux albinos."
+                  data-es="Programas para educar al público sobre los animales albinos."
+                  data-ar="برامج لتثقيف الجمهور حول الحيوانات الألبينية."
+                >
+                  Programs to educate the public about albino animals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a
+            href="Allsections/donate.html"
+            class="btn btn text-white"
+            data-en="Support Our Cause"
+            data-fr="Soutenez Notre Cause"
+            data-es="Apoye Nuestra Causa"
+            data-ar="ادعم قضيتنا"
+            style="background-color: #FF7F50"
+          >
+            Support Our Cause
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeLanguage() {
+        const selectedLanguage =
+          document.getElementById("languageSelect").value;
+        const elements = document.querySelectorAll(
+          "[data-" + selectedLanguage + "]"
+        );
+
+        elements.forEach((element) => {
+          const langText = element.getAttribute("data-" + selectedLanguage);
+          if (langText) {
+            element.innerText = langText;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

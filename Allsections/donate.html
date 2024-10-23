@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar{
+        background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);
+      }
+      .donate-section {
+        position: relative;
+        min-height: 100vh;
+        color: #fff;
+        overflow: visible;
+      }
+
+      .parallax-bg {
+        background: url("../img/6.jpg") no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: brightness(0.6);
+        animation: moveBg 30s linear infinite;
+      }
+
+      @keyframes moveBg {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+
+      .donate-overlay {
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .content-container {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .donate-heading {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInDown 2s ease-in-out;
+      }
+
+      .donate-subheading {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        animation: fadeInUp 2.5s ease-in-out;
+      }
+
+      .donate-card {
+        background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);
+        color: #333;
+        border-radius: 15px;
+        transition: transform 0.5s ease;
+        padding: 20px;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .donate-card:hover {
+        transform: scale(1.05);
+      }
+
+      .donate-card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .donate-card h3 {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+      }
+
+      .donate-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .donate-card-cta {
+        text-align: center;
+      }
+
+      .donate-button {
+        background-color: #FF7F50;
+        text-decoration: none;
+        color: #4a4a4a;;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+      }
+
+      .donate-button:hover {
+        background-color: #4a4a4a;
+        color: #FF7F50;
+      }
+
+      .donation-buttons {
+        margin-top: 30px;
+      }
+
+      .custom-donate-button,
+      .support-us-button {
+        background-color: #FF7F50;
+        color: #4a4a4a;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        margin: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .custom-donate-button:hover,
+      .support-us-button:hover {
+        background-color: #4a4a4a;
+        color: #FF7F50;
+      }
+
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 575.98px) {
+        .content-container .donate-heading {
+          margin-top: 600px;
+          font-size: 1.5rem;
+
+          letter-spacing: 1px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Albino Animals</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="خدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="Preguntas frecuentes"
+                data-ar="أسئلة مكررة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don/Soutien"
+                data-es="Donar/Apoyar"
+                data-ar="تبرع/دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Donate/Support Section -->
+    <section
+      id="donateSupport"
+      class="donate-section position-relative text-center"
+    >
+      <!-- Parallax Background -->
+      <div class="parallax-bg"></div>
+
+      <!-- Overlay -->
+      <div
+        class="donate-overlay d-flex align-items-center justify-content-center"
+      >
+        <div class="content-container">
+          <h2
+            class="donate-heading text-light mb-4"
+            data-en="Support Albino Animals"
+            data-fr="Soutenez les animaux albinos"
+            data-es="Apoya a los animales albinos"
+            data-ar="دعم الحيوانات الأليفة"
+          >
+            Support Albino Animals
+          </h2>
+          <p
+            class="donate-subheading text-light mb-4"
+            data-en="Your contribution helps provide care, shelter, and awareness for rare and beautiful albino creatures worldwide."
+            data-fr="Votre contribution aide à fournir des soins, un abri et de la sensibilisation aux créatures albinos rares et magnifiques à travers le monde."
+            data-es="Tu contribución ayuda a brindar cuidado, refugio y concientización para criaturas albinas raras y hermosas en todo el mundo."
+            data-ar="تساعد مساهمتك في توفير الرعاية والمأوى والتوعية للمخلوقات النادرة والجميلة في جميع أنحاء العالم."
+          >
+            Your contribution helps provide care, shelter, and awareness for
+            rare and beautiful albino creatures worldwide.
+          </p>
+
+          <!-- Donation Cards with Hover Interaction -->
+          <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="donate-card donate-card-1">
+                <div class="donate-card-content">
+                  <h3
+                    data-en="One-Time Donation"
+                    data-fr="Don unique"
+                    data-es="Donación única"
+                    data-ar="تبرع لمرة واحدة"
+                  >
+                    One-Time Donation
+                  </h3>
+                  <p
+                    data-en="Make a one-time contribution to help albino animals today."
+                    data-fr="Faites une contribution unique pour aider les animaux albinos dès aujourd'hui."
+                    data-es="Haz una contribución única para ayudar a los animales albinos hoy."
+                    data-ar="قم بتقديم مساهمة لمرة واحدة لمساعدة الحيوانات الأليفة اليوم."
+                  >
+                    Make a one-time contribution to help albino animals today.
+                  </p>
+                </div>
+                <div class="donate-card-cta">
+                  <a
+                    href="donate-amount.html"
+                    class="donate-button"
+                    data-en="Donate Now"
+                    data-fr="Faire un don"
+                    data-es="Donar ahora"
+                    data-ar="تبرع الآن"
+                    >Donate Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="donate-card donate-card-2">
+                <div class="donate-card-content">
+                  <h3
+                    data-en="Monthly Support"
+                    data-fr="Soutien mensuel"
+                    data-es="Apoyo mensual"
+                    data-ar="الدعم الشهري"
+                  >
+                    Monthly Support
+                  </h3>
+                  <p
+                    data-en="Become a monthly supporter to continuously make a difference."
+                    data-fr="Devenez un soutien mensuel pour faire une différence continue."
+                    data-es="Conviértete en un patrocinador mensual para hacer una diferencia continua."
+                    data-ar="كن داعمًا شهريًا لإحداث فرق دائم."
+                  >
+                    Become a monthly supporter to continuously make a
+                    difference.
+                  </p>
+                </div>
+                <div class="donate-card-cta">
+                  <a
+                    href="donation-join.html"
+                    class="donate-button"
+                    data-en="Join Now"
+                    data-fr="Rejoindre"
+                    data-es="Únete ahora"
+                    data-ar="انضم الآن"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="donate-card donate-card-3">
+                <div class="donate-card-content">
+                  <h3
+                    data-en="Become a Volunteer"
+                    data-fr="Devenez bénévole"
+                    data-es="Hazte voluntario"
+                    data-ar="أصبح متطوع"
+                  >
+                    Become a Volunteer
+                  </h3>
+                  <p
+                    data-en="Give your time and skills to support albino animals around the world."
+                    data-fr="Donnez votre temps et vos compétences pour soutenir les animaux albinos dans le monde entier."
+                    data-es="Dona tu tiempo y habilidades para apoyar a los animales albinos en todo el mundo."
+                    data-ar="تطوع بوقتك ومهاراتك لدعم الحيوانات الأليفة في جميع أنحاء العالم."
+                  >
+                    Give your time and skills to support albino animals around
+                    the world.
+                  </p>
+                </div>
+                <div class="donate-card-cta">
+                  <a
+                    href="donation-join.html"
+                    class="donate-button"
+                    data-en="Volunteer"
+                    data-fr="Devenir bénévole"
+                    data-es="Hazte voluntario"
+                    data-ar="تطوع"
+                    >Volunteer</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Donation Buttons -->
+          <div class="donation-buttons mt-5">
+            <button
+              class="custom-donate-button"
+              onclick="customDonate()"
+              data-en="Custom Donation"
+              data-fr="Don personnalisé"
+              data-es="Donación personalizada"
+              data-ar="تبرع مخصص"
+            >
+              Custom Donation
+            </button>
+            <button
+              class="support-us-button"
+              onclick="learnMoreSupport()"
+              data-en="Learn More"
+              data-fr="En savoir plus"
+              data-es="Aprende más"
+              data-ar="تعرف على المزيد"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Function to change the language based on the selection
+      function changeLanguage() {
+        const selectedLanguage =
+          document.getElementById("languageSelect").value;
+
+        // Get all elements that have data attributes for translations
+        const translatableElements = document.querySelectorAll("[data-en]");
+
+        // Loop through each element and update the inner text based on the selected language
+        translatableElements.forEach((element) => {
+          const translation = element.getAttribute(`data-${selectedLanguage}`);
+          if (translation) {
+            element.textContent = translation;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

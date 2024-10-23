@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="animal-rescue.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .awareness-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        animation: fadeInDown 2s ease-in-out;
+      }
+
+      .info-box {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .info-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .icon-container {
+        transition: background-color 0.3s ease;
+      }
+
+      /* .info-box:hover .icon-container {
+        background-color: #5ba3d9;
+      } */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-fixed-top">
+      <div class="container">
+        <a
+          id="nav-brand"
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات الألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                id="nav-home"
+                class="nav-link"
+                href="index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-about"
+                class="nav-link"
+                href="index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="معلومات عنا"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-services"
+                class="nav-link"
+                href="index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="الخدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-gallery"
+                class="nav-link"
+                href="Allsections/gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-blog"
+                class="nav-link"
+                href="Allsections/blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-faq"
+                class="nav-link"
+                href="Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="Preguntas frecuentes"
+                data-ar="الأسئلة الشائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-donate"
+                class="nav-link"
+                href="Allsections/donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don / Soutenir"
+                data-es="Donar / Apoyar"
+                data-ar="تتبرع / دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-testimonials"
+                class="nav-link"
+                href="Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                id="nav-contact"
+                class="nav-link"
+                href="index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="awareness-section"
+      class="py-5"
+      style="background: linear-gradient(to bottom right, #f7f3e9, #ff7f50)"
+    >
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="text-center">
+          <h2
+            class="awareness-heading"
+            data-en="Raising Awareness for Albino Animals"
+            data-fr="Sensibilisation aux Animaux Albinos"
+            data-es="Concienciación sobre los Animales Albinos"
+            data-ar="التوعية بالحيوانات الألبينية"
+            style="color: #ff7f50"
+          >
+            Raising Awareness for Albino Animals
+          </h2>
+          <p
+            class="lead"
+            data-en="Help us spread the word about the unique challenges albino animals face in the wild and captivity."
+            data-fr="Aidez-nous à sensibiliser le public aux défis uniques auxquels sont confrontés les animaux albinos dans la nature et en captivité."
+            data-es="Ayúdanos a concienciar sobre los desafíos únicos que enfrentan los animales albinos en la naturaleza y en cautiverio."
+            data-ar="ساعدنا في نشر الوعي حول التحديات الفريدة التي تواجهها الحيوانات الألبينية في البرية والأسر."
+          >
+            Help us spread the word about the unique challenges albino animals
+            face in the wild and captivity.
+          </p>
+        </div>
+
+        <!-- Content with Scroll Animation -->
+        <div class="row mt-5">
+          <div class="col-md-6 mb-4 d-flex align-items-center">
+            <div class="info-box" data-aos="fade-right" data-aos-delay="200">
+              <div
+                class="icon-container mb-3"
+                style="
+                  color: #4a4a4a;
+                  background-color: #ff7f50;
+                  border-radius: 50%;
+                  width: 80px;
+                  height: 80px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="fas fa-eye" style="font-size: 2rem"></i>
+              </div>
+              <h3
+                class="info-heading"
+                data-en="Visual Vulnerabilities"
+                data-fr="Vulnérabilités Visuelles"
+                data-es="Vulnerabilidades Visuales"
+                data-ar="الضعف البصري"
+              >
+                Visual Vulnerabilities
+              </h3>
+              <p
+                class="info-text"
+                data-en="Albino animals often suffer from poor eyesight or complete blindness, making survival in the wild extremely challenging."
+                data-fr="Les animaux albinos souffrent souvent de mauvaise vue voire de cécité, rendant la survie à l'état sauvage extrêmement difficile."
+                data-es="Los animales albinos a menudo sufren de mala vista o ceguera total, lo que hace que la supervivencia en la naturaleza sea extremadamente difícil."
+                data-ar="تعاني الحيوانات الألبينية غالبًا من ضعف البصر أو العمى التام، مما يجعل البقاء في البرية تحديًا كبيرًا."
+              >
+                Albino animals often suffer from poor eyesight or complete
+                blindness, making survival in the wild extremely challenging.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="img/58.jpg"
+              class="img-fluid shadow-lg"
+              alt="Albino animal with visual challenges"
+              style="border-radius: 5%; width: 200px"
+            />
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6 mb-4 order-md-2 d-flex align-items-center">
+            <div class="info-box" data-aos="fade-left" data-aos-delay="400">
+              <div
+                class="icon-container mb-3"
+                style="
+                  color: #4a4a4a;
+                  background-color: #ff7f50;
+                  border-radius: 50%;
+                  width: 80px;
+                  height: 80px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="fas fa-sun" style="font-size: 2rem"></i>
+              </div>
+              <h3
+                class="info-heading"
+                data-en="Sensitivity to Sunlight"
+                data-fr="Sensibilité à la Lumière Solaire"
+                data-es="Sensibilidad a la Luz Solar"
+                data-ar="الحساسية لأشعة الشمس"
+              >
+                Sensitivity to Sunlight
+              </h3>
+              <p
+                class="info-text"
+                data-en="Without protective pigments, albino animals are extremely sensitive to sunlight, making them prone to skin diseases and sunburns."
+                data-fr="Sans pigments protecteurs, les animaux albinos sont extrêmement sensibles à la lumière du soleil, les rendant vulnérables aux maladies de peau et aux coups de soleil."
+                data-es="Sin pigmentos protectores, los animales albinos son extremadamente sensibles a la luz solar, lo que los hace propensos a enfermedades de la piel y quemaduras solares."
+                data-ar="بدون صبغات واقية، تكون الحيوانات الألبينية حساسة للغاية لأشعة الشمس، مما يعرضها لأمراض الجلد والحروق الشمسية."
+              >
+                Without protective pigments, albino animals are extremely
+                sensitive to sunlight, making them prone to skin diseases and
+                sunburns.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 order-md-1">
+            <img
+              src="img/50.jpg"
+              class="img-fluid rounded shadow-lg"
+              alt="Albino animal in sunlight"
+              style="border-radius: 5%; width: 200px"
+            />
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a
+            href="Allsections/donate.html"
+            class="btn btn-lg px-5 py-3 text-white"
+            style="border-radius: 25px; background-color: #ff7f50"
+            data-en="Join the Awareness Movement"
+            data-fr="Rejoignez le Mouvement de Sensibilisation"
+            data-es="Únete al Movimiento de Concienciación"
+            data-ar="انضم إلى حركة التوعية"
+          >
+            Join the Awareness Movement
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeLanguage() {
+        const selectedLanguage =
+          document.getElementById("languageSelect").value;
+        const elements = document.querySelectorAll(
+          "[data-" + selectedLanguage + "]"
+        );
+
+        elements.forEach((element) => {
+          const langText = element.getAttribute("data-" + selectedLanguage);
+          if (langText) {
+            element.innerText = langText;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

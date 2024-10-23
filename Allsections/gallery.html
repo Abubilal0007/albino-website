@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Albino Animals gallery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding-top: 70px; 
+        background: linear-gradient(to bottom right, #F7F3E9, #FF7F50);
+      }
+
+      
+      .gallery-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 20px;
+      }
+      .gallery-item {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+      .gallery-item:hover {
+        transform: scale(1.1);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .gallery-item-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        display: none;
+      }
+      .gallery-item:hover .gallery-item-caption {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="الحيوانات الألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="خدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="معرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="../Allsections/blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="FAQ"
+                data-ar="أسئلة شائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don/Soutien"
+                data-es="Donar/Apoyar"
+                data-ar="تبرع/دعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/testimonial.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+      <h2
+        class="text-center my-4"
+        data-en="Albino Animals Gallery"
+        data-fr="Galerie des Animaux Albinos"
+        data-es="Galería de Animales Albinos"
+        data-ar="معرض الحيوانات الألبينو"
+      >
+        Albino Animals Gallery
+      </h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="../img/10.jpg" alt="Albino Lion" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Lion"
+            data-fr="Lion Albinos"
+            data-es="León Albino"
+            data-ar="أسد ألبينو"
+          >
+            Albino Lion
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/37.jpg" alt="Albino Elephant" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Elephant"
+            data-fr="Éléphant Albinos"
+            data-es="Elefante Albino"
+            data-ar="فيل ألبينو"
+          >
+            Albino Elephant
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/24.jpg" alt="Albino Peacock" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Peacock"
+            data-fr="Paon Albinos"
+            data-es="Pavo Real Albino"
+            data-ar="طاووس ألبينو"
+          >
+            Albino Peacock
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="..//img/12.jpg" alt="Albino Tiger" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Tiger"
+            data-fr="Tigre Albinos"
+            data-es="Tigre Albino"
+            data-ar="نمر ألبينو"
+          >
+            Albino Tiger
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/16.jpg" alt="Albino Penguin" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Penguin"
+            data-fr="Pingouin Albinos"
+            data-es="Pingüino Albino"
+            data-ar="بطريق ألبينو"
+          >
+            Albino Penguin
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/62.jpg" alt="Albino Kangaroo" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Kangaroo"
+            data-fr="Kangourou Albinos"
+            data-es="Canguro Albino"
+            data-ar="كنغر ألبينو"
+          >
+            Albino Kangaroo
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/59.jpg" alt="Albino Zebra" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Zebra"
+            data-fr="Zèbre Albinos"
+            data-es="Cebra Albina"
+            data-ar="حمار وحشي ألبينو"
+          >
+            Albino Zebra
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/78.jpg" alt="Albino Alligator" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Alligator"
+            data-fr="Alligator Albinos"
+            data-es="Caimán Albino"
+            data-ar="تمساح ألبينو"
+          >
+            Albino Alligator
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/63.jpg" alt="Albino Gorilla" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Gorilla"
+            data-fr="Gorille Albinos"
+            data-es="Gorila Albino"
+            data-ar="غوريلا ألبينو"
+          >
+            Albino Gorilla
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/33.jpg" alt="Albino Koala" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Koala"
+            data-fr="Koala Albinos"
+            data-es="Koala Albino"
+            data-ar="كوالا ألبينو"
+          >
+            Albino Koala
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/23.jpg" alt="Albino Hedgehog" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Hedgehog"
+            data-fr="Hérisson Albinos"
+            data-es="Erizo Albino"
+            data-ar="قنفذ ألبينو"
+          >
+            Albino Hedgehog
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/28.jpg" alt="Albino Raven" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Raven"
+            data-fr="Corbeau Albinos"
+            data-es="Cuervo Albino"
+            data-ar="غراب ألبينو"
+          >
+            Albino Raven
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/61.jpg" alt="Albino Bat" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Bat"
+            data-fr="Chauve-souris Albinos"
+            data-es="Murciélago Albino"
+            data-ar="خفاش ألبينو"
+          >
+            Albino Bat
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/2.jpg" alt="Albino Deer" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Deer"
+            data-fr="Cerf Albinos"
+            data-es="Ciervo Albino"
+            data-ar="غزال ألبينو"
+          >
+            Albino Deer
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../img/41.jpg" alt="Albino Giraffe" />
+          <div
+            class="gallery-item-caption"
+            data-en="Albino Giraffe"
+            data-fr="Girafe Albinos"
+            data-es="Jirafa Albina"
+            data-ar="زرافة ألبينو"
+          >
+            Albino Giraffe
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeLanguage() {
+        const selectedLang = document.getElementById("languageSelect").value;
+        const elements = document.querySelectorAll(
+          "[data-en], [data-fr], [data-es], [data-ar]"
+        );
+
+        elements.forEach((el) => {
+          const enText = el.getAttribute("data-en");
+          const frText = el.getAttribute("data-fr");
+          const esText = el.getAttribute("data-es");
+          const arText = el.getAttribute("data-ar");
+
+          switch (selectedLang) {
+            case "fr":
+              el.textContent = frText;
+              break;
+            case "es":
+              el.textContent = esText;
+              break;
+            case "ar":
+              el.textContent = arText;
+              break;
+            default:
+              el.textContent = enText;
+              break;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

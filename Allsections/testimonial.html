@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate/Support - Albino Animals</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      body{
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+      }
+      .navbar{
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+      }
+      .carousel-container {
+        padding-left: 200px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .client_section {
+        padding: 80px 15px;
+      }
+
+      .client_section .carousel-inner {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+      }
+
+      .client_section .heading_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .client_section .box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 45px 0;
+        border-radius: 15px;
+      }
+
+      .client_section .img-box {
+        border-radius: 100%;
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+        margin-bottom: -82.5px;
+        position: relative;
+        border: 7px solid #ff7f50;
+      }
+
+      .client_section .img-box img {
+        width: 100%;
+        height: auto;
+      }
+
+      .client_section .detail-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        padding: 112.5px 25px 25px 25px;
+        color: #4A4A4A;
+      }
+
+      .client_section .carousel_btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .client_section .carousel-control-prev,
+      .client_section .carousel-control-next {
+        position: unset;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color:  #ff7f50;
+        border-radius: 5px;
+        margin: 0 2.5px;
+        color: #4A4A4A;
+      }
+
+      .client_section .carousel-control-prev:hover,
+      .client_section .carousel-control-next:hover {
+        background: linear-gradient(to bottom right, #f7f3e9, #ff7f50);
+        color: #4A4A4A;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-container {
+          padding-left: 0;
+          justify-content: center;
+        }
+
+        .client_section .carousel-inner {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          data-en="Albino Animals"
+          data-fr="Animaux Albinos"
+          data-es="Animales Albinos"
+          data-ar="حيوانات ألبينو"
+          >Albino Animals</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#home"
+                data-en="Home"
+                data-fr="Accueil"
+                data-es="Inicio"
+                data-ar="الصفحة الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#about"
+                data-en="About"
+                data-fr="À propos"
+                data-es="Acerca de"
+                data-ar="حول"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#services"
+                data-en="Services"
+                data-fr="Services"
+                data-es="Servicios"
+                data-ar="الخدمات"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="gallery.html"
+                data-en="Gallery"
+                data-fr="Galerie"
+                data-es="Galería"
+                data-ar="المعرض"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="blog.html"
+                data-en="Blog"
+                data-fr="Blog"
+                data-es="Blog"
+                data-ar="مدونة"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../Allsections/faq.html"
+                data-en="FAQ"
+                data-fr="FAQ"
+                data-es="Preguntas Frecuentes"
+                data-ar="الأسئلة الشائعة"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="donate.html"
+                data-en="Donate/Support"
+                data-fr="Faire un don/Soutien"
+                data-es="Donar/Apoyar"
+                data-ar="تبرع/الدعم"
+                >Donate/Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="testimonials.html"
+                data-en="Testimonials"
+                data-fr="Témoignages"
+                data-es="Testimonios"
+                data-ar="شهادات"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../index.html#contact"
+                data-en="Contact"
+                data-fr="Contact"
+                data-es="Contacto"
+                data-ar="اتصل"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <select
+            id="languageSelect"
+            class="form-select ms-3"
+            style="width: 100px"
+            onchange="changeLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="ar">Arabic</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+
+    <section class="client_section layout_padding">
+      <div class="container">
+        <div class="heading_container text-center" style="margin-top: 5px">
+          <h2
+            data-en="Testimonial"
+            data-fr="Témoignage"
+            data-es="Testimonio"
+            data-ar="شهادة"
+          >
+            Testimonial
+          </h2>
+          <p
+            class="lead"
+            data-en="Explore what our clients say about us."
+            data-fr="Découvrez ce que nos clients disent de nous."
+            data-es="Descubre lo que dicen nuestros clientes sobre nosotros."
+            data-ar="اكتشف ما يقوله عملاؤنا عنا."
+          >
+            Explore what our clients say about us.
+          </p>
+        </div>
+
+        <div
+          id="carouselExample2Controls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/30.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Siaalya"
+                          data-fr="Siaalya"
+                          data-es="Siaalya"
+                          data-ar="سياليا"
+                        >
+                          Siaalya
+                        </h6>
+                      </div>
+                      <p
+                        data-en="The beauty of albino animals is beyond words. This site helped me discover their uniqueness."
+                        data-fr="La beauté des animaux albinos est indescriptible. Ce site m'a aidé à découvrir leur unicité."
+                        data-es="La belleza de los animales albinos es indescriptible. Este sitio me ayudó a descubrir su singularidad."
+                        data-ar="جمال الحيوانات الألبينو يفوق الوصف. ساعدني هذا الموقع في اكتشاف تفردها."
+                      >
+                        The beauty of albino animals is beyond words. This site
+                        helped me discover their uniqueness.
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/test1.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Lucas"
+                          data-fr="Lucas"
+                          data-es="Lucas"
+                          data-ar="لوكاس"
+                        >
+                          Lucas
+                        </h6>
+                      </div>
+                      <p
+                        data-en="I've always been fascinated by rare animals. The albino gallery is simply stunning."
+                        data-fr="J'ai toujours été fasciné par les animaux rares. La galerie albinos est tout simplement époustouflante."
+                        data-es="Siempre me han fascinado los animales raros. La galería de albinos es simplemente impresionante."
+                        data-ar="لطالما افتتنت بالحيوانات النادرة. معرض الحيوانات الألبينو مذهل حقًا."
+                      >
+                        I've always been fascinated by rare animals. The albino
+                        gallery is simply stunning.
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/testim.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Emma"
+                          data-fr="Emma"
+                          data-es="Emma"
+                          data-ar="إيما"
+                        >
+                          Emma
+                        </h6>
+                      </div>
+                      <p
+                        data-en="Every visit to this site opens my eyes to the beauty of these amazing creatures."
+                        data-fr="Chaque visite de ce site m'ouvre les yeux sur la beauté de ces créatures incroyables."
+                        data-es="Cada visita a este sitio me abre los ojos a la belleza de estas criaturas asombrosas."
+                        data-ar="تفتح كل زيارة لهذا الموقع عيني على جمال هذه المخلوقات الرائعة."
+                      >
+                        Every visit to this site opens my eyes to the beauty of
+                        these amazing creatures.
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/ttt2.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Olivia"
+                          data-fr="Olivia"
+                          data-es="Olivia"
+                          data-ar="أوليفيا"
+                        >
+                          Olivia
+                        </h6>
+                      </div>
+                      <p
+                        data-en="Learning about these rare creatures has been a delight. I recommend this site to everyone!"
+                        data-fr="Apprendre sur ces créatures rares a été un plaisir. Je recommande ce site à tout le monde !"
+                        data-es="Aprender sobre estas criaturas raras ha sido un placer. ¡Recomiendo este sitio a todos!"
+                        data-ar="لقد كان التعرف على هذه المخلوقات النادرة متعة. أوصي بهذا الموقع للجميع!"
+                      >
+                        Learning about these rare creatures has been a delight.
+                        I recommend this site to everyone!
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/ttttt.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Noah"
+                          data-fr="Noah"
+                          data-es="Noah"
+                          data-ar="نوح"
+                        >
+                          Noah
+                        </h6>
+                      </div>
+                      <p
+                        data-en="This site is an eye-opener. Albino animals are truly unique and fascinating!"
+                        data-fr="Ce site est une révélation. Les animaux albinos sont vraiment uniques et fascinants !"
+                        data-es="Este sitio es una revelación. ¡Los animales albinos son realmente únicos y fascinantes!"
+                        data-ar="هذا الموقع كاشف للعيان. الحيوانات الألبينو فريدة من نوعها ومذهلة حقًا!"
+                      >
+                        This site is an eye-opener. Albino animals are truly
+                        unique and fascinating!
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="../img/ttt3.jpg" alt="Client Image" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6
+                          data-en="Sophia"
+                          data-fr="Sophia"
+                          data-es="Sophia"
+                          data-ar="صوفيا"
+                        >
+                          Sophia
+                        </h6>
+                      </div>
+                      <p
+                        data-en="A breathtaking collection of animals I never knew existed. This site is one of a kind!"
+                        data-fr="Une collection à couper le souffle d'animaux que je ne savais pas exister. Ce site est unique en son genre !"
+                        data-es="Una colección impresionante de animales que nunca supe que existían. ¡Este sitio es único!"
+                        data-ar="مجموعة مذهلة من الحيوانات التي لم أكن أعرف بوجودها. هذا الموقع فريد من نوعه!"
+                      >
+                        A breathtaking collection of animals I never knew
+                        existed. This site is one of a kind!
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel_btn-container">
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample2Controls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample2Controls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeLanguage() {
+        const language = document.getElementById("languageSelect").value;
+        const elements = document.querySelectorAll("[data-" + language + "]");
+
+        elements.forEach((element) => {
+          const key = element.getAttribute("data-" + language);
+          if (key) {
+            element.innerText = key;
+          }
+        });
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
